@@ -372,9 +372,8 @@ marquee {
   padding: 10px 20px; 
   font-size: 20px; 
   text-align: center;
-
 }
-	
+
 div.gallery {
   background-image: url("water-backdrop.jpg"); /*source: https://unsplash.com/photos/a-bird-flying-over-a-body-of-water-2u3oF3knzZE*/
   margin: 1%;
@@ -385,8 +384,7 @@ div.gallery {
   height: 400px;
   background-size: 100%;
   border-radius: 0px;
-  
-  
+ 
 }
 
 @media only screen and (max-width: 900px) {
@@ -406,6 +404,7 @@ div.gallery img {
   max-width: 100%;
   height: auto;
   width: auto;
+
 }
 
 div.gallery button {
@@ -500,36 +499,6 @@ div.gallery button:hover, div.gallery button:focus {
   /* transform: translate(-50%, -17%); */
   max-width: 50px;
 } 
-
-/* pop-up text */
-<!--        .imgtxt {-->
-<!--          width: fit-content;-->
-<!--          height: fit-content;-->
-<!--          display: inline-block;-->
-<!--          position: relative;-->
-<!--          font-family: 'Lastik', sans-serif;-->
-<!--        }-->
-
-<!--        .imgtxt span {-->
-<!--          opacity: 1;-->
-<!--          position: absolute;-->
-<!--          top: 50%;-->
-<!--          left: 50%;-->
-<!--          transform: translate(-50%, -50%);-->
-<!--          z-index: 99;-->
-<!--          font-size: 200%;-->
-<!--          color: #c3d59f;-->
-<!--          -webkit-text-stroke-width: .01px;-->
-<!--          -webkit-text-stroke-color: black;-->
-<!--          letter-spacing: -1.7px;-->
-<!--        }-->
-<!--        .imgtxt:hover span, .imgtxt:focus span {-->
-<!--          opacity: 1;-->
-<!--          color: #5184b3;-->
-<!--        }-->
-<!--        .imgtxt:hover img, .imgtxt:focus img {-->
-<!--          /* add hover effects like transform or filter to your images here! */-->
-<!--        }-->
 
 /* CSS for extras */
 
