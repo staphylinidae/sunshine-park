@@ -1,327 +1,509 @@
-@font-face {
-            font-family: Nunito;
-            src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
-        }
+/* user styles */
 
-        @font-face {
-            font-family: Nunito;
-            src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
-            font-weight: bold;
-        }
+/* styles are what change the color and sizes of stuff on your site. */
 
-        @font-face {
-            font-family: Nunito;
-            src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
-            font-style: italic;
-        }
+/* these are variables that are being used in the code
+these tended to confuse some people, so I only kept
+the images as variables */
 
-        @font-face {
-            font-family: Nunito;
-            src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
-            font-style: italic;
-            font-weight: bold;
-        }
+:root {
+	--header-image: url("unsplash chelsey marques.jpg");
+	--body-bg-image: url("jungle.jpg"); /* https://unsplash.com/photos/a-lush-green-forest-filled-with-lots-of-trees-oH8c8GZtUnM */
+	--sidebar-bg-image: url("1zigzag.jpg");
+	--bullet-arrow: url("chalk-arrow.png");
 
-        .thasadith-regular {
-          font-family: "Thasadith", sans-serif;
-          font-weight: 400;
-          font-style: normal;
-        }
+	/* colors */
+	--content: #2d6a02;
+}
 
-        .thasadith-bold {
-          font-family: "Thasadith", sans-serif;
-          font-weight: 700;
-          font-style: normal;
-        }
+/* if you have the URL of a font, you can set it below */
+/* feel free to delete this if it's not your vibe */
 
-        .thasadith-regular-italic {
-          font-family: "Thasadith", sans-serif;
-          font-weight: 400;
-          font-style: italic;
-        }
+/* this seems like a lot for just one font and I would have to agree
+but I wanted to include an example of how to include a custom font.
+If you download a font file you can upload it onto your Neocities
+and then link it! Many fonts have separate files for each style
+(bold, italic, etc. T_T) which is why there are so many! */
 
-        .thasadith-bold-italic {
-          font-family: "Thasadith", sans-serif;
-          font-weight: 700;
-          font-style: italic;
-        }
+.fredoka-<uniquifier> {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 87.5;
+}
 
-        .instrument-serif-regular {
-              font-family: "Instrument Serif";
-              font-style: normal;
-            }
+body {
+	font-family: 'Fredoka', sans-serif;
+	font-weight: 400;
+	font-size: .9em;
+	line-height: 1.3em;
+	margin: 0;
+	background-color: #2d6a02;
+	/* you can delete the line below if you'd prefer to not use an image */
+	color: #e6eff4;
+}
 
-        .instrument-serif-regular-italic {
-            font-family: "Instrument Serif";
-            font-weight: 400;
-            font-style: italic;
-        } */
+body.home{
+		background-size: 100%;
 
-         @national-park-medium {
-            font-family: "National Park";
-            src: url("NationalPark-Medium.woff");
-            font-weight: normal;
-         }
+	background-image: url(jungle.jpg);
+}
 
-        @national-park-bold {
-            font-family: "National Park";
-            src: url("NationalPark-Bold.woff");
-            font-weight: bold;
-         }
+body.crochet{
+		background-size: 100%;
 
-         @national-park-variable {
-            font-family: "National Park";
-            src: url("NationalPark-VariableVF.woff");
-            font-weight: 50px;
-         }
+	background-image: url(lake.jpg);
+}
 
-        body {
-            font-family: 'Thasadith', sans-serif;
-            font-weight: 700;
-            font-color: white;
-            margin: 0;
-<!--        letter-spacing: .5px;-->
-            background-color: #2d6a02;
-            /* you can delete the line below if you'd prefer to not use an image */
-            background-size: 1000px;
-            color: #abb6bc;
-            background-image: var(--body-bg-image);
-        }
+body.words{
+		background-size: 100%;
 
-        * {
-            box-sizing: border-box;
-        }
+	background-image: url(jungle.jpg);
+}
 
-        /* below this line is CSS for the layout */
+body.about{
+		background-size: 50%;
 
-        /* this is a CSS comment
+	background-image: url(cabin.jpg);
+}
+
+body.resources{
+		background-size: 100%;
+
+	background-image: url(greenhouse.jpg);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* below this line is CSS for the layout */
+
+/* this is a CSS comment
 to uncomment a line of CSS, remove the * and the /
 before and after the text */
 
 
-        /* the "container" is what wraps your entire website */
-        /* if you want something (like the header) to be Wider than
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
 the other elements, you will need to move that div outside
 of the container */
-        #container {
-            max-width: 1000px;
-            /* this is the width of your layout! */
-            /* if you change the above value, scroll to the bottom
-  and change the media query according to the comment! */
-            margin: 0 auto;
-            /* this centers the entire page */
-        }
+#container {
+	max-width: 1000px;
+	/* this is the width of your layout! */
+	/* if you change the above value, scroll to the bottom
+and change the media query according to the comment! */
+	margin: 0 auto;
+	/* this centers the entire page */
+}
 
-        /* the area below is for all links on your page
+/* the area below is for all links on your page
 EXCEPT for the navigation */
-        #container a {
-            color: #5184b3;
-            /* if you want to remove the underline
-  you can add a line below here that says:
-  text-decoration:none; */
-        }
+#container a {
+	color: #5184b3;
+	/* if you want to remove the underline
+you can add a line below here that says:
+text-decoration:none; */
+}
 
-        #header {
-            width: 100%;
-            background-color: #2d6a02;
-            /* header color here! */
-            height: 150px;
-            /* this is only for a background image! */
-            /* if you want to put images IN the header,
-  you can add them directly to the <div id="header"></div> element! */
-            background-image: var(--header-image);
-            background-size: 100%;
-            border-style: dashed;
-            border-width: 1px;
-            border-color: #0a130e;
-        }
+#header {
+	width: 100%;
+	background-color: #2d6a02;
+	/* header color here! */
+	height: 150px;
+	/* this is only for a background image! */
+	/* if you want to put images IN the header,
+you can add them directly to the <div id="header"></div> element! */
+	background-image: var(--header-image);
+	background-size: 100%;
+	border-style: dashed;
+	border-width: 1px;
+	border-color: #0a130e;
+}
 
-        /* navigation section!! */
-        #navbar {
-            height: 40px;
-            background-color: #13092D;
-            /* navbar color */
-            width: 100%;
-        }
+audio {width: 100%; display: block; padding: 10px}
 
-        #navbar ul {
-            display: flex;
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-            justify-content: space-evenly;
-        }
+a {
+	text-decoration: none;
+}
 
-        a {
-            text-decoration: none;
-        }
+a:hover {
+	text-decoration: underline;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+ol {
+	padding-left: 0px;
+	margin-left: 0px;
+	list-style-position: inside;
+}
 
-        ol {
-            padding-left: 0px;
-            margin-left: 0px;
-            list-style-position: inside;
-        }
+ul {
+	padding-left: 0px;
+	list-style-position: inside;
+	text-align: center;
+	margin-right: 0px;
+	list-style-position: inside;
+}
 
-        ul {
-            padding-left: 0px;
-            list-style-position: inside;
-            text-align: center;
-            margin-right: 0px;
-            list-style-position: inside;
-        }
+#flex {
+	display: flex;
+}
 
-        #navbar li {
-            padding-top: 10px;
-        }
-
-        /* navigation links*/
-        #navbar li a {
-            color: #ED64F5;
-            /* navbar text color */
-            font-weight: 800;
-            text-decoration: none;
-            /* this removes the underline */
-        }
-
-        /* navigation link when a link is hovered over */
-        #navbar li a:hover {
-            color: #a49cba;
-            text-decoration: underline;
-        }
-
-        #flex {
-            display: flex;
-        }
-
-        /* this colors BOTH sidebars
+/* this colors BOTH sidebars
 if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
-        aside {
-            background-color: #1c5200;
-            width: 200px;
-            padding: 15px;
-            font-size: smaller;
-            /* this makes the sidebar text slightly smaller */
-            border-style: solid;
-            border-width: 1px;
-            border-color: #0a130e;
-        }
+aside {
+	background-color: #1c5200;
+	width: 200px;
+	padding: 10px;
+	font-size: smaller;
+	/* this makes the sidebar text slightly smaller */
+	border-style: solid;
+	border-width: 1px;
+	border-color: #0a130e;
+}
 
-
-        /* this is the color of the main content area,
+/* this is the color of the main content area,
 between the sidebars! */
-        main {
-            background-color: #1c5200;
-            flex: 1;
-            padding: 20px;
-            padding-top: 0px;
-            order: 2;
-        }
+main {
+	background-color: #1c5200;
+	flex: 1;
+	padding: 10px;
+	padding-top: 0px;
+	order: 2;
+	justify-content: center;
+}
 
-        /* what's this "order" stuff about??
+/* what's this "order" stuff about??
 allow me to explain!
 if you're using both sidebars, the "order" value
 tells the CSS the order in which to display them.
 left sidebar is 1, content is 2, and right sidebar is 3! */
 
-       #leftSidebar {
-            order: 1;
-        }
+#leftSidebar {
+	order: 1;
+}
 
-        #rightSidebar {
-            order: 3;
-        }
+#rightSidebar {
+	order: 3;
+}
 
-        footer {
-            background-color: #0a130e;
-            /* background color for footer */
-            width: 100%;
-            height: 40px;
-            padding: 10px;
-            text-align: center;
-            /* this centers the footer text */
-        }
+footer {
+	background-color: #0a130e;
+	/* background color for footer */
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+	/* this centers the footer text */
+}
 
-        h1,
-        h2,
-        h3 {
-            font-family: 'Lastik', monospace;
-            font-weight: normal;
-            text-align: center;
-            color: #c3d59f;
-            letter-spacing: -.05em;
-            -webkit-text-stroke-width: .02em;
-            -webkit-text-stroke-color: black;
-        }
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Lastik', monospace;
+	font-weight: normal;
+	text-align: center;
+	color: #e6eff4;
+	-webkit-text-stroke-width: .02em;
+	-webkit-text-stroke-color: black;
+		line-height: 1.2em;
+}
 
-        h1 {
-            font-size: 350%;
-        }
+h2,
+h3,
+h4 {
+		letter-spacing: -.02em;
 
-        h2 {
-            font-size: 300%;
-        }
+}
 
-        h3 {
-            font-size: 200%;
-        }
+h1 {
+	font-size: 400%;
+		letter-spacing: -.05em;
 
-        strong {
-            /* this styles bold text */
-            color: #c3d59f;
-        }
+}
 
-        /* this is just a cool box, it's the darker colored one */
-        .box {
-            background-color: #0a130e;
-            border: 1px solid #0a130e;
-            padding: 15px;
-            padding-top: 0px;
-            border-radius: 10px;
-        }
+h2 {
+	font-size: 267%;
+}
 
-        #box-left {
-            background-color: #0a130e;
-            border: 1px solid #0a130e;
-            padding: 15px;
-            padding-top: 0px;
-            border-radius: 10px;
-        }
+h3 {
+	font-size: 200%;
+}
 
-        #box-left a {
-            color: #e6eff4;
-        }
+h4 {
+	font-family: 'Fredoka', monospace;
+	-webkit-text-stroke-width: 0em;
+	letter-spacing: 0em;
+	font-size: 1.5em;
+}
 
-        #box-left a:hover {
-            color: #5184b3;
-            text-decoration:none;
-        }
+h5 { /* for photo description part in crochet */
+	font-family: 'Fredoka', sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	
+}
 
-        .box1 {
-            background-color: #0a130e;
-            border: 1px solid #0a130e;
-            padding: 15px;
-            padding-top: 60px;
-            margin-top: 140px;
-            border-radius: 10px;
-        }
+strong {
+	/* this styles bold text */
+	color: #c3d59f;
+}
 
-        .button {
-          background-color: #04AA6D; /* Green */
-          border: none;
-          color: white;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-        }
+marquee {
+	margin: 15px;
+	font-size: 2em;
+	line-height: 1.2em;
 
-        /* pop-up text */
+}
+
+/* this is just a cool box, it's the darker colored one */
+.box {
+	background-color: #0a130e;
+	border: 1px solid #0a130e;
+	padding: 15px;
+		padding-top: 0px;
+		margin-top: 15px;
+	border-radius: 5px;
+}
+
+#box-left {
+	background-color: #0a130e;
+	border: 1px solid #0a130e;
+	padding: 15px;
+	padding-top: 0px;
+		border-radius: 5px;
+				margin-top: 5px;
+}
+
+#box-left a {
+	color: #e6eff4;
+}
+
+#box-left a:hover {
+	color: #5184b3;
+	text-decoration:none;
+}
+
+#box-audio {
+	background: src("beige-paper.png");
+	background-opacity: 0.5;
+	background-color: #0a130e;
+	border: 1px solid #0a130e;
+	padding: 15px;
+	padding-top: 0px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+#box-bottom {
+	background-color: #247BA0; /*2708A0, 247BA0, 731DD8, 4E148C, 613DC1*/
+	border: 1px solid #0a130e;
+	padding: 0px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 0px;
+		border-radius: 5px;
+}
+
+#box-bottom a{
+	color: #e6eff4;
+}
+
+#box-bottom a:hover{
+	color: #5184b3;
+	-webkit-text-stroke-color: #280086;
+}
+
+#statuscafe {
+	background-color: #0a130e;
+	border: 1px solid #0a130e;
+	padding: 15px;
+	padding-top: 10px;
+		margin-top: 15px;
+
+    /* background-color: azure; */
+    border: 0px solid midnightblue;
+		border-radius: 5px;
+
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
+
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #000000; 
+  color: #fff; 
+  padding: 10px 20px; 
+  font-size: 20px; 
+  text-align: center;
+
+div.gallery {
+  background-image: url("water-backdrop.jpg"); /*source: https://unsplash.com/photos/a-bird-flying-over-a-body-of-water-2u3oF3knzZE*/
+  margin: 1%;
+  padding: 10px;
+  border: 1px solid #0a130e;
+  float: left;
+  width: 31%;
+  height: 400px;
+  background-size: 100%;
+  border-radius: 0px;
+  
+  
+}
+
+@media only screen and (max-width: 900px) {
+div.gallery {
+    width: 47.5%;		//TODO: change for mobile
+  }
+}
+
+div.gallery:hover {
+  border: 1px solid #D65B09;
+}
+
+div.gallery img {
+  padding: 5px;
+  width: 100%;
+  max-height: 50%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -17%);
+}
+
+div.gallery button {
+  background: none; 
+  border: none;
+  color: #e6eff4;
+    text-align: center;
+
+
+}
+
+div.desc {
+  font-family: 'Fredoka', sans-serif;
+  padding: 5px;
+  margin-top: 5px;
+  max-height: 30%;
+  text-align: center;
+  background-color: #0a130e;
+  border-radius: 5px;
+  overflow: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  color: e6eff4;
+}
+
+div.popupImg {
+  /* width: 80%; */
+  /* max-height: 50%; */
+  /* max-width: 100%; */
+  /* height: auto; */
+  /* width: auto; */
+  /* position: absolute; */
+  /* top: 0%; */
+  /* botton: 10%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, 0%); */
+  text-align: center;
+
+}
+
+div.popup button{
+  background: none; 
+  border: none;
+  color: #e6eff4;
+
+}
+
+div.gallery button:hover, div.gallery button:focus { 
+  z-index: 3;
+  cursor: pointer;
+}
+
+:popover-open {
+  background-image: url(water-backdrop.jpg); /*source: https://unsplash.com/photos/a-bird-flying-over-a-body-of-water-2u3oF3knzZE*/
+  background-width: 100%;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #0a130e;
+  height: 80vh;
+  width: 90vh;
+  border-radius: 10px;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+  color: #e6eff4;
+
+}
+
+.popovers figure:popover-open {
+  display: block;
+  background: white;
+  display: flex;
+  overflow: auto;
+    top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+}
+
+.popovers figure:popover-open img {
+  /* padding: 5px; */
+  /* width: 10vw; */
+  /* max-width: 400px; */
+  /* max-height: 400px; */
+  /* height: auto; */
+  /* width: auto; */
+  /* position: absolute; */
+  /* top: 17%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -17%); */
+  max-width: 50px;
+} 
+
+/* pop-up text */
 <!--        .imgtxt {-->
 <!--          width: fit-content;-->
 <!--          height: fit-content;-->
@@ -351,51 +533,51 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
 <!--          /* add hover effects like transform or filter to your images here! */-->
 <!--        }-->
 
-        /* CSS for extras */
+/* CSS for extras */
 
-        #topBar {
-            width: 100%;
-            height: 30px;
-            padding: 10px;
-            font-size: smaller;
-            background-color: #13092D;
-        }
+#topBar {
+	width: 100%;
+	height: 30px;
+	padding: 10px;
+	font-size: smaller;
+	background-color: #13092D;
+}
 
-        /* BELOW THIS POINT IS MEDIA QUERY */
+/* BELOW THIS POINT IS MEDIA QUERY */
 
-        /* so you wanna change the width of your page?
+/* so you wanna change the width of your page?
 by default, the container width is 900px.
 in order to keep things responsive, take your new height,
 and then subtrack it by 100. use this new number as the
 "max-width" value below
 */
 
-        @media only screen and (max-width: 900px) {
-            #flex {
-                flex-wrap: wrap;
-            }
+@media only screen and (max-width: 900px) {
+	#flex {
+		flex-wrap: wrap;
+	}
 
-            aside {
-                width: 100%;
-            }
+	aside {
+		width: 100%;
+	}
 
-            /* the order of the items is adjusted here for responsiveness!
-  since the sidebars would be too small on a mobile device.
-  feel free to play around with the order!
-  */
-            main {
-                order: 1;
-            }
+	/* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+	main {
+		order: 1;
+	}
 
-            #leftSidebar {
-                order: 2;
-            }
+	#leftSidebar {
+		order: 2;
+	}
 
-            #rightSidebar {
-                order: 3;
-            }
+	#rightSidebar {
+		order: 3;
+	}
 
-            #navbar ul {
-                flex-wrap: wrap;
-            }
-        }
+	#navbar ul {
+		flex-wrap: wrap;
+	}
+}
