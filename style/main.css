@@ -406,10 +406,6 @@ div.gallery img {
   max-width: 100%;
   height: auto;
   width: auto;
-  position: absolute;
-  top: 17%;
-  left: 50%;
-  transform: translate(-50%, -17%);
 }
 
 div.gallery button {
