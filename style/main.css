@@ -373,6 +373,8 @@ marquee {
   font-size: 20px; 
   text-align: center;
 
+}
+	
 div.gallery {
   background-image: url("water-backdrop.jpg"); /*source: https://unsplash.com/photos/a-bird-flying-over-a-body-of-water-2u3oF3knzZE*/
   margin: 1%;
