@@ -16,15 +16,6 @@ the images as variables */
 	--content: #2d6a02;
 }
 
-/* if you have the URL of a font, you can set it below */
-/* feel free to delete this if it's not your vibe */
-
-/* this seems like a lot for just one font and I would have to agree
-but I wanted to include an example of how to include a custom font.
-If you download a font file you can upload it onto your Neocities
-and then link it! Many fonts have separate files for each style
-(bold, italic, etc. T_T) which is why there are so many! */
-
 .fredoka-<uniquifier> {
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
@@ -37,7 +28,7 @@ and then link it! Many fonts have separate files for each style
 body {
 	font-family: 'Fredoka', sans-serif;
 	font-weight: 400;
-	font-size: .9em;
+	font-size: 18px;
 	line-height: 1.3em;
 	margin: 0;
 	background-color: #2d6a02;
@@ -53,7 +44,6 @@ body.home{
 
 body.crochet{
 		background-size: 100%;
-
 	background-image: url(lake.jpg);
 }
 
@@ -78,6 +68,8 @@ body.resources{
 * {
 	box-sizing: border-box;
 }
+
+
 
 /* below this line is CSS for the layout */
 
@@ -123,15 +115,54 @@ you can add them directly to the <div id="header"></div> element! */
 	border-color: #0a130e;
 }
 
+/* Add a black background color to the top navigation */
+#topnav {
+  	background-color: #1c5200;
+	border: 1px solid #0a130e;
+	text-align: center;
+	color: #e6eff4;
+	padding: 15px;
+
+}
+
+#topnav ul{
+	justify-content: space-evenly;
+	list-style-type: none;
+    display: flex;
+	padding: 7px;
+    margin: 0;
+	border: 1px solid black;
+	background-color: #0a130e;
+}
+
+#topnav h1{
+	line-height: .2em;
+}
+
+/* Style the links inside the navigation bar */
+#topnav a {
+	font-family: 'Lastik', monospace;
+	font-weight: normal;
+	text-align: center;
+	color: #e6eff4;
+	-webkit-text-stroke-width: .02em;
+	-webkit-text-stroke-color: black;
+	line-height: 1.2em;
+	letter-spacing: -.02em;
+	font-size: 150%;
+}
+
+/* Change the color of links on hover */
+#topnav a:hover {
+  	color: #5184b3;
+	text-decoration:none;
+}
+
 audio {width: 100%; display: block; padding: 10px}
 
-a {
-	text-decoration: none;
-}
+a {	text-decoration: none; }
 
-a:hover {
-	text-decoration: underline;
-}
+a:hover { text-decoration: underline; }
 
 ol {
 	padding-left: 0px;
@@ -165,6 +196,10 @@ aside {
 	border-color: #0a130e;
 }
 
+aside.crochet{
+	background-color: #024466;
+}
+
 /* this is the color of the main content area,
 between the sidebars! */
 main {
@@ -189,6 +224,8 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
 #rightSidebar {
 	order: 3;
 }
+
+
 
 footer {
 	background-color: #0a130e;
@@ -221,17 +258,17 @@ h4 {
 }
 
 h1 {
-	font-size: 400%;
+	font-size: 300%;
 		letter-spacing: -.05em;
 
 }
 
 h2 {
-	font-size: 267%;
+	font-size: 200%;
 }
 
 h3 {
-	font-size: 200%;
+	font-size: 150%;
 }
 
 h4 {
@@ -265,8 +302,8 @@ marquee {
 	background-color: #0a130e;
 	border: 1px solid #0a130e;
 	padding: 15px;
-		padding-top: 0px;
-		margin-top: 15px;
+	padding-top: 0px;
+	margin-top: 15px;
 	border-radius: 5px;
 }
 
@@ -275,12 +312,21 @@ marquee {
 	border: 1px solid #0a130e;
 	padding: 15px;
 	padding-top: 0px;
-		border-radius: 5px;
-				margin-top: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
 }
 
 #box-left a {
 	color: #e6eff4;
+	font-family: 'Lastik', monospace;
+	font-weight: normal;
+	text-align: center;
+	color: #e6eff4;
+	-webkit-text-stroke-width: .02em;
+	-webkit-text-stroke-color: black;
+	line-height: 1.2em;
+	letter-spacing: -.02em;
+	font-size: 200%;
 }
 
 #box-left a:hover {
@@ -382,9 +428,9 @@ div.gallery {
   float: left;
   width: 31%;
   height: 400px;
-  background-size: 100%;
+  background-size: 120%;
   border-radius: 0px;
- 
+  position: relative;
 }
 
 @media only screen and (max-width: 900px) {
@@ -400,51 +446,47 @@ div.gallery:hover {
 div.gallery img {
   padding: 5px;
   width: 100%;
-  max-height: 50%;
+  max-height: 200px;
   max-width: 100%;
   height: auto;
   width: auto;
-
 }
 
 div.gallery button {
   background: none; 
   border: none;
   color: #e6eff4;
-    text-align: center;
-
-
+  text-align: center;
 }
 
 div.desc {
   font-family: 'Fredoka', sans-serif;
   padding: 5px;
   margin-top: 5px;
-  max-height: 30%;
-  text-align: center;
+  max-height: 150px;
   background-color: #0a130e;
   border-radius: 5px;
-  overflow: auto;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  left: 10px;
+  overflow-y: auto;
+  position: relative;
+  vertical-align: baseline;
   color: e6eff4;
 }
 
 div.popupImg {
-  /* width: 80%; */
-  /* max-height: 50%; */
-  /* max-width: 100%; */
-  /* height: auto; */
-  /* width: auto; */
-  /* position: absolute; */
-  /* top: 0%; */
-  /* botton: 10%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, 0%); */
+  width: 80%;
+  max-height: 50%;
+  height: auto;
+  width: auto;
   text-align: center;
+  bottom: 0px;
+}
 
+div.popupImg img{
+	height: 60vh;
+	max-width: 80%;
+	height: auto;
+	maring-left: auto;
+	text-align: center;
 }
 
 div.popup button{
@@ -481,24 +523,24 @@ div.gallery button:hover, div.gallery button:focus {
   background: white;
   display: flex;
   overflow: auto;
-    top: 50vh;
+  top: 50vh;
   left: 50vw;
   transform: translate(-50%,-50%);
 }
 
-.popovers figure:popover-open img {
+/* .popovers figure:popover-open img { */
   /* padding: 5px; */
   /* width: 10vw; */
-  /* max-width: 400px; */
-  /* max-height: 400px; */
+  /* max-width: 300px; */
+  /* max-height: 300px; */
   /* height: auto; */
   /* width: auto; */
   /* position: absolute; */
   /* top: 17%; */
   /* left: 50%; */
   /* transform: translate(-50%, -17%); */
-  max-width: 50px;
-} 
+  /* max-width: 50px; */
+/* }  */
 
 /* CSS for extras */
 
@@ -535,13 +577,17 @@ feel free to play around with the order!
 	main {
 		order: 1;
 	}
-
-	#leftSidebar {
+	
+	#topnav {
 		order: 2;
 	}
 
-	#rightSidebar {
+	#leftSidebar {
 		order: 3;
+	}
+
+	#rightSidebar {
+		order: 4;
 	}
 
 	#navbar ul {
