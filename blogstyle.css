@@ -1,0 +1,90 @@
+:root {
+	--header-image: url("unsplash chelsey marques.jpg");
+	--body-bg-image: url("jungle.jpg"); /* https://unsplash.com/photos/a-lush-green-forest-filled-with-lots-of-trees-oH8c8GZtUnM */
+	--sidebar-bg-image: url("1zigzag.jpg");
+	--bullet-arrow: url("chalk-arrow.png");
+
+	/* colors */
+}
+
+.fredoka-<uniquifier> {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 90;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+audio {width: 100%; display: block; padding: 10px}
+
+a {	text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+ol 
+	padding-left: 0px;
+	margin-left: 0px;
+	list-style-position: inside;
+}
+
+ul {
+	list-style-position: inside;
+	text-align: center;
+}
+
+#flex {
+	display: flex;
+}
+
+footer {
+	/* background color for footer */
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+	/* this centers the footer text */
+}
+
+p, small {
+	font-family: 'Fredoka', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.3em;
+	margin: 0;
+	color: #E6EFF4;
+	text-indent: 15px;
+	margin-bottom: 1em; /* between paragraphs */
+}
+
+small {
+	font-size: small;
+}
+
+h1
+{
+	font-weight: normal;
+	color: #E6EFF4;
+	line-height: .4em;
+	font-size: 200%;
+		font-family: 'Lastik', monospace;
+		-webkit-text-stroke-width: .02em;
+	-webkit-text-stroke-color: black;
+	letter-spacing: -.02em;
+}
+
+strong {
+	/* this styles bold text */
+	color: #c3d59f;
+}
+
+marquee {
+	margin: 15px;
+	font-size: 2em;
+	line-height: 1.2em;
+
+}
