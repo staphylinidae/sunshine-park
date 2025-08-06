@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@87.5,300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lastik" rel="stylesheet">
+	<script src="js/script.js"></script>
+	<link href="../style/main.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
+	
+    <meta charset="UTF-8">
+    <title>Sunshine Park</title>
+
+
+</head>
+<body class="home">
+
+    <div id="container"><div id="header"></div>
+		<div id="topnav">
+	    <h1>welcome to sunshine park</h1>
+		<ul>
+			<li><a href="../home/index.html">Trail</a></li>
+			<li><a href="../crochet/index.html">Lake</a></li>
+			<li><a href="../words/index.html">Journal</a></li>
+			<li><a href="../about/index.html">Cottage</a></li>
+			<li><a href="../resources/index.html">Greenhouse</a></li>
+		</ul>
+	</div>
+        <div id="headerArea"></div>
+        <div id="flex">
+            <aside id="leftSidebar">
+                <div id="statuscafe"><h2>Status</h2>
+				<div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=sunshinepark" defer></script>
+                    <div id="dev-log">
+                    <h2>Dev Log</h2>
+                    <p>Last update: May 11th, 2025</p>
+                    <ol>
+						<li value="2025.5.12">Added panels to crochet page.</li>
+						<li value="2025.5.11">Added more pages.</li>
+                        <li value="2025.5.10">Rearranged things.</li>
+                        <li value="2025.5.9">Started the website!</li>
+                    </ol>
+                </div>
+			</aside>
+            <main>
+                <img src="bench.png" alt="bench" width=500px style="position: relative; left: 10%; top: 0%; margin-top: 25px;">
+                    <p style="text-align: center;">Howdy! This is Sunshine Park, my personal website.</p>
+                    <p>This park is still under construction, so make sure to follow the path markers since there's still
+                        some dead ends. We also have water fountains—make sure to stay hydrated! You can also eat at the picnic
+                        tables if you like, but don't feed the animals.
+                    </p>
+					
+					
+					
+            </main>
+            <aside id="rightSidebar">
+                <div id="box-audio"> <h2>want some background ambience?</h2>
+					<audio src="blackbird-in-forest.mp3" controls autoplay>Your browser does not support the audio element.</audio>
+					<p style="text-align: center;">Blackbird in forest by carlito62 </p>
+                </div>
+				 <div class="box">
+                    <p>Github: <a href="https://github.com/staphylinidae/sunshine-park">sunshine-park</a>
+					<br> Ravelry: <a href="https://www.ravelry.com/people/thisCantCrochet">thisCantCrochet</a></p>
+                </div>
+            </aside>
+        </div>
+        <footer id="footer">sunshine park, 2025</footer>
+    </div>
+</body>
+<script></script>
+</html>

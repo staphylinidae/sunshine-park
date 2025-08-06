@@ -1,0 +1,901 @@
+:root {
+	--header-image: url("unsplash chelsey marques.jpg");
+	--body-bg-image: url("jungle.jpg"); /* https://unsplash.com/photos/a-lush-green-forest-filled-with-lots-of-trees-oH8c8GZtUnM */
+	--sidebar-bg-image: url("1zigzag.jpg");
+	--bullet-arrow: url("chalk-arrow.png");
+
+	/* colors */
+	--content: #2d6a02;
+	--text-color: #e6e6e6;
+	--box-color: #0a130e;
+	--body-font: 'National Park';
+	--outline-color: black;
+	--bg-color: #2d6a02;
+}
+
+.fredoka-<uniquifier> {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 90;
+}
+
+
+.national-park-<uniquifier> {
+  font-family: "National Park", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Berzierk';
+  src: url('Berzierk-LO7D.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ChiselTipMarkers';
+  src: url('ChiselTipMarkers-ZPnz.ttf') format('truetype');
+}
+
+body {
+	font-family: var(--body-font), sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	margin: 0;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+
+body.blog {
+	background-color: transparent;
+}
+
+body.home{
+		background-size: 100%;
+	background-image: url(jungle2.jpg);
+	 background-repeat: no-repeat;
+	 background-size: 100vw; margin: 30px; margin-bottom: 0;
+}
+
+
+
+body.crochet{
+		background-size: 100%;
+	background-image: url(lake4.jpg);
+}
+
+body.words{
+   background-size: 100%;
+   background-image: url(park-bench-scene.jpg);
+}
+
+body.about{
+		background-size: 100%;
+
+	background-image: url(info-center.jpg);
+}
+
+body.resources{
+		background-size: 100%;
+
+	background-image: url(greenhouse.jpg);
+}
+
+body.screenshot-garden{
+	margin-top: 15px;
+}
+
+body.shrines{
+	background-image: url(trail2.jpg); background-size: 100%;
+	 background-repeat: no-repeat;
+	 background-size: 100vw; margin: 30px; margin-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+	body.home{
+	background-image: none;
+	margin-left: -20px;
+	margin-right: -20px;
+	}
+	body.shrines{
+	background-image: none;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+}
+* {
+	box-sizing: border-box;
+}
+
+    .beetle {
+    border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAyZJREFUeF7tnEGSwyAMBJ3/P3pTOW0ZUzTjEXZSnr0KkGhGQnaSfW3b9rd5fy9v+mE2xVPtrw2A/A+3+wnOWmDbtuoNUjzV/gK0OCMC9NeAqinVpujq+eSP7KRIK/5eDbUWPFFTqwFUr0cJsfMXoMdL2RJUgN4AdHUKUZtEKWcpaqJE0f7llKcF3SIfoCAZ9wBIka09Cm2IPE6hakq7CiXF0fqr7UMeZ255N2D1gNTxbnw0P0ChxLQZEaDFwGygakq542n+6lue/Fs1vDfZOqGJRpk2FKANATrhAC1u5B8HVN0w3ZLqkw01+pQBVLJUuxQ/BfdZTN2gOt49QJpPB072AIWaHoWKl54K7HKFqm2MOp4AqClN/lV/tN7OPlNDpQVPDFY3qI6vPpDhFgO0+IsaAXoBUEop136iKvzOlDPP8gE6ON8ALRZ/gF4AtNjF7cupJUoNeCfKb7jl1Q2o4wNUJWa+XqSXORROFNoQWg601EHn9d/dZYb2Ry9LhvaZW54kT+8LqYap67vjA9QlKKZ4FCoCX65QSknVTiVA3H/58AAtRhqgAboncHebRG/sqURJJW/m64zSgh013Q3UjZ8S5PCkpDqktoJOnAKstqv7U/0HqNiXEuAAXQ1ULdrSiX3hszzFb9mf+CxvAaPJAUqERHuAisBo+N09IsW3wq62UdQmPu6NPV26EjC6ZKPQ41dxLAUH6A8ApROmuqjOV8eTf8u+QqHuBtX56ngLGE0OUCIk2gNUBEbDZ4Au/chg4qeMqn9qk+j1ouUvQPmWpwPY2QM0QA9VjEShprA6HhWqtiHqeKrrtCGaT4CpxtL84X5n3jZZDmj3HXuANlDoAIhxgAboP4GZz+XVmkM11bWr8ajjKb7hegHKbROVsN0BBGiAHu40K0U7j77WejMKtRxMPKtTjaOuQHo0pI8wJtq44UcmAcq/RiZByTWUFiSFUVGn+VGo2ZeubuyrBSIrlBSyNMCJGqz6p4ywMmqmhgbomEAU2vApVXgUesH/sacUV/s+dT2qcav9W5diT6EqALWIq+vTBqv9k79h/AF6xBOgquRhvAX0DaiTqDwfahLQAAAAAElFTkSuQmCC') 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid; 
+  }
+  
+
+/* below this line is CSS for the layout */
+
+/* this is a CSS comment
+to uncomment a line of CSS, remove the * and the /
+before and after the text */
+
+
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
+the other elements, you will need to move that div outside
+of the container */
+#container {
+	max-width: 1000px;
+	/* this is the width of your layout! */
+	/* if you change the above value, scroll to the bottom
+and change the media query according to the comment! */
+	margin: 0 auto;
+	/* this centers the entire page */
+	margin-top: 100px;
+}
+
+/* the area below is for all links on your page
+EXCEPT for the navigation */
+#container a {
+	/* if you want to remove the underline
+you can add a line below here that says:
+text-decoration:none; */
+}
+
+#container a:hover{
+	/* if you want to remove the underline
+you can add a line below here that says:
+text-decoration:none; */
+}
+
+        .sally {
+    border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAxFJREFUeF7tnE1OJDEMRuk1S07B/Q/DKViyBrHrSqN+erJjVYlvVjNyEjsvn52fgrm9vb9+v9z9+fz4ut3/e7Xf2/76u+1v268+bX/b3vq7BehRUFXBBOiSoQEqS9T2lF9XxJYACnC1kz9bs6g9+bPxE5/DBvTrnDpU7TRBAkSbpF3AAIWaF6AS0OkValO4ugvaFCN/Nn7yT/6o//ixiQKilKUabMcnxduaHqBXP4daBVEKnj7laQK77VXgNoW75/OQ8t0O7HgBaolB+wAN0AOB7PLZ5Y8pcfpdnmoYZTj1t3byF6Dwfnn5m9LuqxwpkhS4uz+Nb+3j76H24E0Tqi4IjW/tASpLENXsAO0GSsR3pyilVDWl7fNb1d/4wX56gtP+AvTqN6VpxUz7Q4VWz6k0IapZVTvtAVTD6aKxjh+gcpcngQVogLoiMJ7yJGGqgTZgh6O/NcVrPa41Fm9KAfoccYDKcycpNkB3A6WaQuewag0mBVTt0/PD7/IB+vwb1rrgAbqcQykjSPEBuhsopTi9n1JNpfFJIda+O97td/kAhd+kqwKyCrEKpPbWf7V9++NIdQEIkLVXAVGJwpSnqyZNiHZBCpDGt/bueGi87PK7d/ko9HkORKHy96CopCBQ2kTIAdmnaybFQ0DoGxNlsH4PpYDJoe3f3T5Am4kG6NWAdh98rQKaeT0MZ+Op8mi/KdkJBGjxf9GZ3vXtAkehIPHTAaWA6JhE/e257+z+sIYSkLNPsBqf7R+g8rMyZVSAdgOluzytSNVOxyYav9qfxrd2vMvbAenYsbsm25rXPb8AlT8fSoIJ0G6gRLw7RW2KUY208ZN/8kf9x3d5CsheTQNUphgpJkD/G1BSRLedUtwqsDs+Ox5+l7cD2vYBaolB+wAN0KcEcmzqfhzpLvr2nEn+KSGov7WTP5pfFBqFHjVkFUgKKyt0+j2U/NnnN2pP/giwtY+/NtEECRA91nQfwwIUfoC2u0SswKNQ+bZACzK+y1dTutqfUri8KRFxqllnn2A1Pts/Cr36OdSueDUFp/39AB9jfSbnH3tJAAAAAElFTkSuQmCC') 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid; 
+  }
+  
+    
+  .home-room {
+	  text-align: center; position: relative;
+	  width: 100%;
+  height: 300px;
+  position: relative;
+  transform: scale(.70) translateY(-25%);
+  }
+    div.round {
+      margin: 30px;
+     height: 24.3vw;
+     width: 36.27vw; 
+	 display: inline-block;
+      position: absolute;
+      filter:  drop-shadow(-2px -3px 0 #dad58c) drop-shadow(4px 6px 0 #02170a);
+    }
+
+    div.round img {
+     clip-path: ellipse(50% 50%);
+     object-fit: cover;
+	 height: 24.3vw;
+     width: 36.27vw; 
+    }
+
+    #left-top {
+        left: 0vw;
+        top: 0;
+    }
+
+    #right-top {
+        right: 0vw;
+        top: 0;
+    }
+
+    #left-bottom {
+        left: 0vw; top: 40vw;
+    }
+
+    #right-bottom {
+        right: 0vw; top: 40vw;
+    }
+
+    #center {
+        left: 25vw;
+		top: 20vw;
+    }
+
+	/*
+    @media only screen and (max-width: 1600px) {
+        div.round {
+          margin: 30px;
+          float: left;
+          height: 21.875vw;
+          width: 32.8125vw;
+          position: absolute;
+        }
+
+         div.round img {
+         clip-path: ellipse(50% 50%);
+         object-fit: cover;
+         position: absolute;
+         height: 21.875vw;
+         width: 32.8125vw;
+         display: block;
+         margin: auto;
+        }
+    }
+
+	*/
+
+    @media only screen and (max-width: 600px) {
+        div.round {
+          margin: 30px;
+          float: left;
+          height: 50vw;
+          width: 75vw;
+          position: absolute;
+		  transform: scale(1.25) translateY(10%);
+        }
+
+         div.round img {
+         clip-path: ellipse(50% 50%);
+         object-fit: cover;
+         position: absolute;
+         height: 50vw;
+         width: 75vw;
+         display: block;
+         margin: auto;
+        }
+
+    #left-top {
+        left: 0vw;
+        top: 0;
+    }
+
+    #right-top {
+        right: 0vw;
+        top: 55vw;
+    }
+
+    #left-bottom {
+        left: 0vw; top: 110vw;
+    }
+
+    #right-bottom {
+        right: 0vw; top: 165vw;
+    }
+
+    #center {
+        left: 0vw;
+        top: 220vw;
+    }
+    }
+
+	
+
+.back {margin-bottom: 10px; margin-left: -140px;  float: left;   
+text-align: center;
+height: 50px;
+line-height: 50px;
+  width: 100px;
+  background: url(jungle2.jpg);
+  background-size: 1000%;
+  outline: 1px solid black;
+  border-radius: 50%;  
+  background-position: center;
+}
+
+
+a.back {
+	text-decoration: none;
+}
+
+a.back:hover {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+.backtxt {
+	      filter: drop-shadow(1px 1px 0 black) 
+    drop-shadow(-1px 1px 0 black)
+    drop-shadow(1px -1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+}
+
+#header {
+	width: 100%;
+	background-color: #2d6a02;
+	/* header color here! */
+	height: 150px;
+	/* this is only for a background image! */
+	/* if you want to put images IN the header,
+you can add them directly to the <div id="header"></div> element! */
+	background-image: var(--header-image);
+	background-size: 100%;
+	border-style: dashed;
+	border-width: 1px;
+	border-color: var(--box-color);
+}
+
+
+/* Add a black background color to the top navigation */
+#topnav {
+  	background-color: #1c5200;
+	border: 1px solid var(--box-color);
+	text-align: center;
+	color: var(--text-color);
+	padding: 15px;
+}
+
+#topnav ul{
+	justify-content: space-evenly;
+	list-style-type: none;
+    display: flex;
+	padding: 0px;
+    margin: 0;
+	background-color: var(--box-color);
+}
+
+#topnav h1{
+	line-height: .6em;
+}
+
+#topnav ul li a {
+    padding: 6px 0 0 0;
+    display: block;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    width: 193.2px;
+    height: 40px;
+    background: var(--box-color);
+    color: var(--text-color);
+    font-family: "Lastik", serif;
+    text-align: center;
+    text-decoration: none;
+	-webkit-text-stroke-width: .02em;
+	-webkit-text-stroke-color: black;
+	line-height: 1.2em;
+	letter-spacing: -.02em;
+	font-size: 150%;
+}
+
+#topnav ul li a:hover {
+    background: var(--text-color);
+    color: #0a130e;
+}
+
+
+audio {width: 100%; display: block; padding: 10px}
+
+a {	text-decoration: underline;     background: none;
+    color: var(--text-color);}
+
+a:hover { text-decoration: underline;     background: var(--text-color);
+    color: var(--box-color);}
+
+ol {
+	padding-left: 0px;
+	margin-left: 0px;
+	list-style-position: outside;
+}
+
+ul {
+	padding-left: 0px;
+	text-align: left;
+	margin-right: 0px;
+	list-style-position: outside;
+}
+
+#flex {
+	display: flex;
+}
+
+/* this colors BOTH sidebars
+if you want to style them separately,
+create styles for #leftSidebar and #rightSidebar */
+aside {
+	background-color: #1c5200;
+	width: 200px;
+	padding: 10px;
+	font-size: smaller;
+	/* this makes the sidebar text slightly smaller */
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--box-color);
+	border-top: 0px;
+}
+
+aside.crochet{
+	background-color: #024466;
+}
+
+/* this is the color of the main content area,
+between the sidebars! */
+main {
+	background-color: #1c5200;
+	flex: 1;
+	padding: 10px;
+	order: 2;
+	justify-content: center;
+	outline: 1px solid black;
+}
+
+/* what's this "order" stuff about??
+allow me to explain!
+if you're using both sidebars, the "order" value
+tells the CSS the order in which to display them.
+left sidebar is 1, content is 2, and right sidebar is 3! */
+
+#leftSidebar {
+	order: 1;
+}
+
+#rightSidebar {
+	order: 3;
+}
+
+
+
+footer {
+	background-color: var(--box-color);
+	/* background color for footer */
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+	/* this centers the footer text */
+}
+
+h1, /* TODO: make the header on the first page stand out more*/
+h2,
+h3,
+h4 {
+	font-weight: normal;
+	line-height: 1.2em;
+	color: var(--text-color);
+
+}
+
+h2,
+h3,
+h4 {
+	letter-spacing: -.02em;
+	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+
+}
+
+h1 {
+	font-size: 300%;
+	letter-spacing: -.05em;
+	text-align: center;
+	-webkit-text-stroke-width: .02em;
+	-webkit-text-stroke-color: black;
+	font-family: 'Lastik', monospace;
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+}
+
+h2 {
+	font-size: 200%;
+
+}
+
+h3 {
+	font-size: 150%;
+}
+
+h4 {
+	font-family: var(--body-font), monospace;
+	-webkit-text-stroke-width: 0em;
+	letter-spacing: 0em;
+	font-size: 1.5em;
+}
+
+h5 { /* for photo description part in crochet */
+	font-family: var(--body-font), sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	
+}
+
+strong {
+	/* this styles bold text */
+	color: #c3d59f;
+}
+
+marquee {
+	margin: 15px;
+	font-size: 2em;
+	line-height: 1.2em;
+
+}
+
+::selection {
+	background-color: #9fb06d;
+	color: black;
+}
+
+a.invisible{
+}
+
+a.invisible:hover {
+	background-color: transparent;
+	cursor: default;
+}
+
+
+
+.enter {
+	outline: 1px solid black; border-radius: 50%; width: 120px;
+	background: #9fb06d;
+	color: var(--box-color);
+	text-align: center;
+	font-size: 200%; letter-spacing: -.02em;
+	color: var(--box-color);
+}
+
+.enter a{
+	text-decoration: none; background-color: transparent;
+		color: black;
+}
+
+.enter:hover{
+		text-decoration: none;
+		background-color: black;
+
+}
+.enter a:hover {
+	color: #9fb06d;
+}
+
+/* this is just a cool box, it's the darker colored one */
+.box {
+	background-color: var(--box-color);;
+	border: 1px solid var(--box-color);;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+.box a {
+	background: var(--box-color);;
+    color: var(--text-color);
+}
+
+.box a:hover {
+	background: var(--text-color);
+    color: var(--box-color);;
+}
+
+#dev-log {
+	background-color: var(--box-color);;
+	border: 1px solid var(--box-color);;
+	padding: 15px;
+	padding-top: 0px;
+	border-radius: 5px;
+	margin-top: 10px;
+	max-height: 200px;
+	overflow: auto;
+}
+
+#box-left {
+	background-color: var(--box-color);;
+	border: 1px solid var(--box-color);;
+	padding: 15px;
+	padding-top: 0px;
+	border-radius: 5px;
+	font-size: 120%;
+}
+
+#box-left a {
+	color: var(--text-color);
+	font-family: 'Lastik', monospace;
+	font-weight: normal;
+	text-align: center;
+	color: var(--text-color);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	line-height: 1.2em;
+	letter-spacing: -.02em;
+	font-size: 170%;
+}
+
+#box-blog {
+	background-color: #4b1500;
+	border: 1px solid var(--box-color);
+	padding: 15px;
+	border-radius: 5px;
+}
+
+#statuscafe {
+	background-color: var(--box-color);
+	border: 1px solid var(--box-color);
+	padding: 15px;
+	padding-top: 10px;
+    border: 1px solid black;
+	border-radius: 5px;
+}
+
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+
+#statuscafe a:hover {
+    background: var(--text-color);
+    color: var(--box-color);
+}
+
+#statuscafe-content {
+}
+
+.scrollbox {
+	overflow-y: scroll; max-height: 210px; padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 50%); outline: 1px solid #9fb06d; border-radius: 1px;
+}
+
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #000000; 
+  color: #fff; 
+  padding: 10px 20px; 
+  font-size: 20px; 
+  text-align: center;
+}
+
+div.gallery {
+  background-image: url("water-backdrop.jpg"); /*source: https://unsplash.com/photos/a-bird-flying-over-a-body-of-water-2u3oF3knzZE*/
+  margin: 1%;
+  padding: 10px;
+  border: 1px solid var(--box-color);
+  float: left;
+  width: 31%;
+  height: 400px;
+  background-size: 120%;
+  border-radius: 0px;
+  position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+div.gallery {
+    width: 47.5%;		//TODO: change for mobile
+  }
+}
+
+div.gallery:hover {
+  border: 1px solid #D65B09;
+}
+
+div.gallery img {
+  padding: 5px;
+  width: 100%;
+  max-height: 200px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+div.gallery button {
+  background: none; 
+  border: none;
+  color: var(--text-color);
+  text-align: center;
+}
+
+div.desc {
+  font-family: var(--body-font), sans-serif;
+  padding: 5px;
+  margin-top: 5px;
+  max-height: 150px;
+  background-color: var(--box-color);
+  border-radius: 5px;
+  overflow-y: auto;
+  position: relative;
+  vertical-align: baseline;
+  color: var(--text-color);
+
+}
+
+div.popupImg {
+  width: 80%;
+  max-height: 50%;
+  height: auto;
+  width: auto;
+  text-align: center;
+  bottom: 0px;
+}
+
+div.popupImg img{
+	height: 60vh;
+	max-width: 80%;
+	height: auto;
+	maring-left: auto;
+	text-align: center;
+}
+
+div.popup button{
+  background: none; 
+  border: none;
+  color: var(--text-color);
+
+}
+
+div.gallery button:hover, div.gallery button:focus { 
+  z-index: 3;
+  cursor: pointer;
+}
+
+:popover-open {
+  background-image: url(water-backdrop.jpg); /*source: https://unsplash.com/photos/a-bird-flying-over-a-body-of-water-2u3oF3knzZE*/
+  background-width: 100%;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid var(--box-color);
+  height: 80vh;
+  width: 90vh;
+  border-radius: 10px;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+  color: var(--text-color);
+
+}
+
+.popovers figure:popover-open {
+  display: block;
+  background: white;
+  display: flex;
+  overflow: auto;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+}
+
+.imgtxt {
+  width: fit-content;
+  height: fit-content;
+}
+.imgtxt span {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  font-size: 4.5vw;
+  color: var(--text-color);
+    filter: drop-shadow(1px 1px 0 black) 
+    drop-shadow(-1px 1px 0 black)
+    drop-shadow(1px -1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+
+}
+
+@media only screen and (max-width: 600px) {
+  .imgtxt span {
+	font-size: 9vw;
+  }
+}
+
+.imgtxt:hover span, .imgtxt:focus span {
+  opacity: 1;
+
+}
+.imgtxt:hover img, .imgtxt:focus img {
+  /* add hover effects like transform or filter to your images here! */
+}
+
+a.imgtxt:hover {
+	background: transparent;
+}
+
+iframe{
+	margin: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+    width:770px;
+    height:600px;
+	background-color: var(--box-color);
+background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */    
+background-size: 20%;
+	border: 1px solid black;
+    overflow: auto;
+	font-weight: 400;
+	font-size: 18px;
+	color: var(--text-color);
+	padding: 10px;
+}
+
+
+#wcb.carbonbadge{}
+
+#wcb.carbonbadge sub{ }
+
+#wcb #wcb_2,#wcb #wcb_a,#wcb #wcb_g{color: --text-color; }
+
+#wcb #wcb_a,#wcb #wcb_g{ border: 1px red;}
+
+#wcb #wcb_g{background-color: red; }
+
+#wcb #wcb_a{ }
+
+#wcb.wcb-d #wcb_a{ }
+
+#wcb.wcb-d #wcb_2{ }
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page?
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the
+"max-width" value below
+*/
+
+@media only screen and (max-width: 900px) {
+	#flex {
+		flex-wrap: wrap;
+	}
+
+	aside {
+		width: 100%;
+	}
+
+	/* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+	main {
+		order: 1;
+	}
+	
+	#topnav {
+		order: 2;
+	}
+
+	#leftSidebar {
+		order: 3;
+	}
+
+	#rightSidebar {
+		order: 4;
+	}
+
+	#topnav ul {
+		flex-wrap: wrap;
+	}
+}

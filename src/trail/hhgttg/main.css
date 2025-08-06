@@ -1,0 +1,510 @@
+:root {
+	--header-image: url("unsplash chelsey marques.jpg");
+	--body-bg-image: url("jungle.jpg"); /* https://unsplash.com/photos/a-lush-green-forest-filled-with-lots-of-trees-oH8c8GZtUnM */
+	--sidebar-bg-image: url("1zigzag.jpg");
+	--bullet-arrow: url("chalk-arrow.png");
+
+	/* colors */
+	--content: #2d6a02;
+	--bg-color: #153158;
+	--outline-color: black;
+	--text-color: #e6e6e6;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dotgothic16-regular {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'DOS';
+  src: url(DOS-V_re_JPN16.woff) format('woff');
+}
+
+body {
+	font-family: 'DOS';
+	font-size: 18px;
+	line-height: 1.2em;
+	margin: 0;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	background-size: 400px;
+	background-image: url(2.gif);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+/* below this line is CSS for the layout */
+
+/* this is a CSS comment
+to uncomment a line of CSS, remove the * and the /
+before and after the text */
+
+
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
+the other elements, you will need to move that div outside
+of the container */
+#container {
+	max-width: 800px;
+	/* this is the width of your layout! */
+	/* if you change the above value, scroll to the bottom
+and change the media query according to the comment! */
+	margin: 0 auto;
+	/* this centers the entire page */
+	border-style: outset;
+	border-color: #153158;
+}
+
+/* the area below is for all links on your page
+EXCEPT for the navigation */
+#container a {
+	/* if you want to remove the underline
+you can add a line below here that says:
+text-decoration:none; */
+}
+
+#container a:hover{
+	/* if you want to remove the underline
+you can add a line below here that says:
+text-decoration:none; */
+}
+
+#header {
+	width: 100%;
+	background-color: var(--bg-color);
+	/* header color here! */
+	height: 150px;
+	/* this is only for a background image! */
+	/* if you want to put images IN the header,
+you can add them directly to the <div id="header"></div> element! */
+	background-image: var(--header-image);
+	background-size: 100%;
+	border-style: dashed;
+	border-width: 1px;
+	border-color: #0a130e;
+}
+
+
+/* Add a black background color to the top navigation */
+#topnav {
+  	background-color: var(--bg-color);
+	border: 1px solid #0a130e;
+	text-align: center;
+	color: var(--text-color);
+	padding: 15px;
+}
+
+audio {width: 100%; display: block; padding: 10px}
+
+a {	text-decoration: underline;     background: none;
+    color: var(--text-color);}
+
+a:hover { text-decoration: underline;     background: var(--text-color);
+    color: #0a130e;}
+
+ol {
+	padding-left: 0px;
+	margin-left: 0px;
+	list-style-position: inside;
+}
+
+ul {
+	padding-left: 0px;
+	list-style-position: inside;
+	text-align: center;
+	margin-right: 0px;
+	list-style-position: inside;
+}
+
+#flex {
+	display: flex;
+}
+
+
+/* this is the color of the main content area,
+between the sidebars! */
+main {
+	background-color: var(--bg-color);
+	flex: 1;
+	padding: 10px;
+	padding-top: 0px;
+	order: 2;
+	justify-content: center;
+}
+
+footer {
+	background-color: #0a130e;
+	/* background color for footer */
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+	/* this centers the footer text */
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Space Mono", monospace;
+	font-weight: 700;
+	text-align: center;
+	color: var(--text-color);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: var(--outline-color);
+	line-height: 1.2em;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-indent: 0px;
+}
+
+h1 {
+	font-size: 220%;
+	text-shadow: -1px -1px 0px #dcd5ca;
+}
+
+h2 {
+	font-size: 200%;
+}
+
+h3 {
+	font-size: 150%;
+}
+
+h4 {
+	font-family: 'VT323', monospace;
+	-webkit-text-stroke-width: 0em;
+	font-size: 1.5em;
+}
+
+h5 { /* for photo description part in crochet */
+	font-family: 'VT323', sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	
+}
+
+p{
+	text-indent: 3em;
+}
+
+strong {
+	/* this styles bold text */
+	color: #c3d59f;
+}
+
+marquee {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin-top: 15px;
+	background: #5A0001;
+}
+
+#statuscafe {
+	background-color: #0a130e;
+	border: 1px solid #0a130e;
+	padding: 15px;
+	padding-top: 10px;
+    border: 1px solid black;
+	border-radius: 5px;
+}
+
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+
+#statuscafe a:hover {
+    background: var(--text-color);
+    color: #0a130e;
+}
+
+#statuscafe-content {
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #000000; 
+  color: #fff; 
+  padding: 10px 20px; 
+  font-size: 20px; 
+  text-align: center;
+}
+
+div.desc {
+  font-family: 'Fredoka', sans-serif;
+  padding: 5px;
+  margin-top: 5px;
+  max-height: 150px;
+  background-color: #0a130e;
+  border-radius: 5px;
+  overflow-y: auto;
+  position: relative;
+  vertical-align: baseline;
+  color: var(--text-color);
+
+}
+
+div.gallery button:hover, div.gallery button:focus { 
+  z-index: 3;
+  cursor: pointer;
+}
+
+iframe{
+}
+
+.tooltip {
+  position: relative;
+  display: inline;
+  color: #D4DA9B;
+  text-indent: 0em;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: .08em;
+ }
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #0E2F3A;
+  outline: 1px solid black;
+  color: var(--text-color);
+  text-align: center;
+  border-radius: 1px;
+  padding: 7px 5px;
+  line-height: 1.2em;
+
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -50%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  font-size: 80%;
+}
+
+.button {
+  position: relative;
+  background: transparent;
+  display: inline;
+  color: #D4DA9B;
+  text-indent: 0em;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: .08em;
+  font-size: 1em;
+  font-family: 'DOS';
+  border: none;
+  margin: 0;
+  line-height: 1rem;
+
+  anchor-name: --comment-black-box;
+}
+
+.button:hover, .button:focus {
+  color: red;
+}
+
+:popover-open {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  color: var(--text-color);
+  background-color: transparent;
+	position: relative;
+	bottom: 100px;
+}
+
+.extra-info {
+	position: absolute;
+	position-anchor: --comment-black-box;
+
+	margin: 0px;
+	inset: auto;
+	top: anchor(top);
+	right: 0;
+	border: 0;
+	padding: 0;
+}
+
+.extra-info:popover-open {
+	display: grid;
+
+}
+
+.imgtxt {
+	 width: fit-content;
+	 height: fit-content;
+	 display: inline-block;
+	 position: relative;
+	 color: var(--text-color);
+
+}
+.imgtxt span {
+	 opacity: 0;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 z-index: 99;
+	 font-family: "Space Mono";
+	 font-weight: 700;
+	 font-size: 2.5rem;
+	 	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: var(--outline-color);
+	letter-spacing: -0.04em;
+
+}
+.imgtxt:hover span, .imgtxt:focus span {
+	 opacity: 1;
+}
+.imgtxt:hover, .imgtxt:focus {
+	background-color: transparent;
+}
+
+a.footnote {
+   text-decoration:none;
+   padding-left: 2px;
+   padding-right: 2px;
+   margin-right: 2px;
+   font-family: 'Space Mono';
+   -webkit-transition: all 2s ease;
+   -moz-transition: all 2s ease;
+   -o-transition: all 2s ease;
+   transition: all 2s ease;
+   color: #957FEF;
+} 
+
+a.footnote span {
+	   font-family: 'DOS';
+	   color: #e6e6e6;
+   z-index: -1;
+   opacity: 0;
+   position: fixed;
+   bottom: 20px;
+   margin-left: 0px;
+   margin-right: 18px;
+   padding:10px;
+   	 left: 50%;
+	 transform: translate(-50%, 0%);
+   border-radius:1px; 
+   background-color: #5A0001;
+   -webkit-transition: all 2s ease;
+   -moz-transition: all 2s ease;
+   -o-transition: all 2s ease;
+   transition: all 2s ease;
+   	border-style: outset;
+	   border-width: 2px;
+	border-color: #5A0001;
+		text-indent: 0px;
+
+}
+
+a.footnote:hover span {
+   z-index: 9;
+   opacity: 1;
+   	   color: --text-color;
+
+   -webkit-transition: all 2s ease;
+   -moz-transition: all 2s ease;
+   -o-transition: all 2s ease;
+   transition: all 2s ease;
+}
+
+
+#spaceship {margin-top: 80px; margin-bottom: 10px; margin-left: -180px;  float: left; text-indent: 3em;
+}
+
+
+
+@media only screen and (max-width: 1230px) {
+	#spaceship {margin-top: 15px; margin-bottom: 10px; margin-left: -50px; margin-right: 15px;}
+}
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page?
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the
+"max-width" value below
+*/
+
+@media only screen and (max-width: 900px) {
+	#flex {
+		flex-wrap: wrap;
+	}
+
+	/* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+	main {
+		order: 1;
+	}
+	
+	#topnav {
+		order: 2;
+	}
+
+	#leftSidebar {
+		order: 3;
+	}
+
+	#rightSidebar {
+		order: 4;
+	}
+
+	#topnav ul {
+		flex-wrap: wrap;
+	}
+}
