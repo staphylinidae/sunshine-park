@@ -10,24 +10,13 @@
     <title>Sunshine Park</title>
     </head>
 
-    <body style="background: linear-gradient(#9fb06d 10%, #004c69 20%, #0f127b 30%, #0c0841 40%)">
-        <div id="container" style="margin-top: 15vh; margin-bottom: 5vh; max-width: 800px;" > <!--keep everything in here-->
+    <body style="">
+        <div id="container" style="margin-top: 10vh; margin-bottom: 5vh; max-width: 800px;" > <!--keep everything in here-->
 			<div id="flex" > <!--this has both sidebars and main-->
-				<main style="padding: 30px; background: #0a130e;
-
-    border-image-slice:
-270 96 206 103;
-border-image-width:
-270px 96px 206px 103px;
-border-image-outset:
-250px 90px 200px 100px;
-border-image-repeat:
-stretch stretch;
-border-image-source:
-url(style/backdrops/information2.png);
->
-					<div class="maintext">
-						<h1 style="text-align: left; font-size: 335%;">welcome to sunshine park! <img src="banana-slug.png" style="height: .9em;"></h1>
+				<main style="padding: 0px; background-color: hsla(0, 100%, 50%, 0); outline: 0px;">
+<img src="style/backdrops/information2.png" width=800px style="display: block; z-index= -5;">
+<aside id="leftsidebar" style="float: left; display: inline; position: relative; top: -474px; left: 65px; width: 305px; background: linear-gradient(#02114b 1%, #00536a 2%, #00536a 90%, #002957 100%);">
+<img src="banana-slug.png" style="height: 40px; position: absolute; top: 15px; left: 240px;">                        <h1 style="text-align: left; font-size: 335%;">welcome to sunshine park! </h1> 
 						<hr>
                             <script>NekoType="ghetto"</script>
 <h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a 
@@ -35,28 +24,31 @@ href="https://webneko.net">Neko</a></h1>
 						<p>This website is currently not very accessible and is made for desktop. I might work on making this mobile-friendly.</p>
                         <h2 style="text-align: left;">Warning</h2>
                         <p style="margin-top: -8px; margin-bottom: 10px;" >This site contains:</p>
-                        <div class="scrollbox">
+                        <div class="scrollbox" style="height: 81px;">
                         <ul  style="margin: 5px;">
                         <li>Autoplaying audio</li>
                         <li>A "secret" page</li>
                         <li>A cat in the corner who will follow your mouse around if you click on it (and stop following if you click again)</li>
                         </ul>
                         </div>
+                        </aside>
+                        <div style="background-color: hsla(0, 100%, 50%, 0);"></div> 
+                        <aside id="rightsidebar" style="float: right; position: relative; top: -473px; right: 66px; width: 302px; background: linear-gradient(#02114b 1%, #00536a 2%, #00536a 90%, #002957 100%);">
 						<h2 style="text-align: left;">Things I'm working on</h2>
-                        <div class="scrollbox">
+                        <div class="scrollbox" style="max-height: 213px;">
                         <ul style="margin: 5px;">
 						<li>Statuscafe does not load (perhaps because I am a new user? but it's been a while and still hasn't figured itself out yet soo)</li>
 						<li>Some colors may look off, because I always have "night shift" turned on, so the colors I set are not true to other users.</li>
-                        <li>Add music from: https://webdeckplayer.neocities.org/ ?</li>
-                        <li>Deploy site with github: https://nenrikido.neocities.org/blog/post/deploy-site/</li>
                         <li>Change selection color</li>
                         <li>Adding a mini blog section to replace my dead blog</li>
-                        <li>Make a better image gallery to make a screenshot garden</li>
+                        <li>Add back "secret" page whoops</li>
+                        <li>Add guestbook link</li>
                         </ul>
                         </div>
 						<p>This site was updated as of <span id="lastupdate"></span>. </p>
 						<div class="enter"> <a href="home/index.html" style="">Enter</h2></div>
-					</div>
+</aside>					
+</div>
 				</main>
 			</div> 
         </div>

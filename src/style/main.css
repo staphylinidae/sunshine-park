@@ -43,7 +43,6 @@
 body {
 	font-family: var(--body-font), sans-serif;
 	font-weight: 400;
-	font-size: 18px;
 	margin: 0;
 	background-color: var(--bg-color);
 	color: var(--text-color);
@@ -56,9 +55,8 @@ body.blog {
 
 body.home{
 		background-size: 100%;
-	background-image: url(jungle2.jpg);
-	 background-repeat: no-repeat;
-	 background-size: 100vw; margin: 30px; margin-bottom: 0;
+	background: #00536a;
+	margin: 30px; margin-bottom: 0;
 }
 
 
@@ -398,14 +396,13 @@ if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
 aside {
 	background-color: #1c5200;
-	width: 200px;
+	width: 45%;
 	padding: 10px;
-	font-size: smaller;
-	/* this makes the sidebar text slightly smaller */
 	border-style: solid;
 	border-width: 1px;
 	border-color: var(--box-color);
 	border-top: 0px;
+	z-index: 1;
 }
 
 aside.crochet{
@@ -637,7 +634,7 @@ a.invisible:hover {
 }
 
 .scrollbox {
-	overflow-y: scroll; max-height: 210px; padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 50%); outline: 1px solid #9fb06d; border-radius: 1px;
+	overflow-y: scroll;  padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 50%); outline: 1px solid #9fb06d; border-radius: 1px;
 }
 
 .button {
