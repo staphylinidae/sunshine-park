@@ -35,11 +35,6 @@
   src: url('Berzierk-LO7D.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'ChiselTipMarkers';
-  src: url('ChiselTipMarkers-ZPnz.ttf') format('truetype');
-}
-
 body {
 	font-family: var(--body-font), sans-serif;
 	font-weight: 400;
