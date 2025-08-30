@@ -11,28 +11,19 @@
 	--body-font: 'National Park';
 	--outline-color: black;
 	--bg-color: #2d6a02;
-}
-
-.fredoka-<uniquifier> {
-  font-family: "Fredoka", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-  "wdth" 90;
-}
-
-
-.national-park-<uniquifier> {
-  font-family: "National Park", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+	--head-font: 'Worlds Finest';
 }
 
 @font-face {
-  font-family: 'Berzierk';
-  src: url('Berzierk-LO7D.ttf') format('truetype');
+  font-family: 'Worlds Finest';
+  src: url('fonts/WorldsFinest/WorldsfinestNormal.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'National Park';
+  src: url('fonts/NationalPark/NationalPark-VariableFont_wght.ttf') format('truetype');
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 body {
@@ -195,8 +186,10 @@ text-decoration:none; */
     }
 
     #center {
-        left: 25vw;
+		position: relative;
+        right: 0px;
 		top: 20vw;
+		
     }
 
 	/*
@@ -446,15 +439,14 @@ h2,
 h3,
 h4 {
 	font-weight: normal;
-	line-height: 1.2em;
 	color: var(--text-color);
 
 }
 
 h2,
 h3,
-h4 {
-	letter-spacing: -.02em;
+h4
+{
 	text-align: left;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -462,20 +454,31 @@ h4 {
 
 }
 
+h3,
+h4 {
+	letter-spacing: -.02em;
+	line-height: 1.2em;
+}
+
 h1 {
-	font-size: 300%;
-	letter-spacing: -.05em;
+	font-size: 360%;
 	text-align: center;
-	-webkit-text-stroke-width: .02em;
-	-webkit-text-stroke-color: black;
-	font-family: 'Lastik', monospace;
+
 	margin-top: 0px;
 	margin-bottom: 0px;
 
 }
 
+h1,
 h2 {
-	font-size: 200%;
+		font-family: var(--head-font), monospace;
+	    letter-spacing: .02em;
+		line-height: .98em;
+			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+          -1px 1px 0 #000, 1px 1px 0 #000;
+}
+h2 {
+	font-size: 260%;
 
 }
 
@@ -529,7 +532,8 @@ a.invisible:hover {
 	background: #9fb06d;
 	color: var(--box-color);
 	text-align: center;
-	font-size: 200%; letter-spacing: -.02em;
+	font-family: var(--head-font);
+	font-size: 200%; letter-spacing: .02em;
 	color: var(--box-color);
 }
 

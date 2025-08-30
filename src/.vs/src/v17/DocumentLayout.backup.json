@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:style\\main.css||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UwAmp\\www\\sunshine-park\\src\\trail\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trail\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UwAmp\\www\\sunshine-park\\src\\home\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:home\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UwAmp\\www\\sunshine-park\\src\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UwAmp\\www\\sunshine-park\\src\\about\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:about\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,34 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\UwAmp\\www\\sunshine-park\\src\\trail\\index.html",
-              "RelativeDocumentMoniker": "trail\\index.html",
-              "ToolTip": "C:\\UwAmp\\www\\sunshine-park\\src\\trail\\index.html",
-              "RelativeToolTip": "trail\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-28T19:53:32.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\UwAmp\\www\\sunshine-park\\src\\home\\index.html",
-              "RelativeDocumentMoniker": "home\\index.html",
-              "ToolTip": "C:\\UwAmp\\www\\sunshine-park\\src\\home\\index.html",
-              "RelativeToolTip": "home\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-28T19:47:51.283Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -62,22 +28,22 @@
               "RelativeDocumentMoniker": "style\\main.css",
               "ToolTip": "C:\\UwAmp\\www\\sunshine-park\\src\\style\\main.css",
               "RelativeToolTip": "style\\main.css",
-              "ViewState": "AgIAALQAAAAAAAAAAAArwMsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAswLwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-08-28T18:49:20.653Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "index.html",
-              "DocumentMoniker": "C:\\UwAmp\\www\\sunshine-park\\src\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\UwAmp\\www\\sunshine-park\\src\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAACxAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\UwAmp\\www\\sunshine-park\\src\\about\\index.html",
+              "RelativeDocumentMoniker": "about\\index.html",
+              "ToolTip": "C:\\UwAmp\\www\\sunshine-park\\src\\about\\index.html",
+              "RelativeToolTip": "about\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-28T18:34:41.571Z",
+              "WhenOpened": "2025-08-29T18:58:24.53Z",
               "EditorCaption": ""
             },
             {
