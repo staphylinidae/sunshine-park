@@ -7,7 +7,7 @@
 	/* colors */
 	--content: #2d6a02;
 	--text-color: #e6e6e6;
-	--box-color: #0a130e;
+	--box-color: #020c24;
 	--body-font: 'National Park';
 	--outline-color: black;
 	--bg-color: #2d6a02;
@@ -37,32 +37,34 @@ body {
 }
 
 body.front-page{
-	background: #002611;
+	--bg-color: #002611;
+}
+
+body.about {
+	--bg-color: #02396a;
 }
 
 body.blog {
-	background-color: transparent;
+	--bg-color: transparent;
 }
 
 body.home{
-		background-size: 100%;
-	background: #00536a;
+	--bg-color: #00536a;
 	margin: 30px; margin-bottom: 0;
 }
 
 
 
 body.crochet{
-	background: #ebfe61;
+	--bg-color: #ebfe61;
 }
 
 body.words{
-   background-size: 100%;
-   background-image: url(park-bench-scene.jpg);
+   --bg-color: #ebfe61;
 }
 
 body.resources{
-	background: #154b91;
+	--bg-color: #154b91;
 }
 
 body.screenshot-garden{
@@ -77,7 +79,6 @@ body.shrines{
 
 @media only screen and (max-width: 600px) {
 	body.home{
-	background-image: none;
 	margin-left: -20px;
 	margin-right: -20px;
 	}
@@ -250,18 +251,22 @@ text-decoration:none; */
 
 	
 
-.back {margin-bottom: 10px; margin-left: -140px;  float: left;   
-text-align: center;
-height: 50px;
-line-height: 50px;
+.back {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	background: var(--box-color);
   width: 100px;
-  background: url(jungle2.jpg);
-  background-size: 1000%;
   outline: 1px solid black;
   border-radius: 50%;  
-  background-position: center;
 }
 
+.back:hover {
+	background: var(--bg-color);
+}
 
 a.back {
 	text-decoration: none;
@@ -687,15 +692,14 @@ a.invisible:hover {
 }
 
 div.gallery {
-  background-image: url("water-backdrop.jpg"); /*source: https://unsplash.com/photos/a-bird-flying-over-a-body-of-water-2u3oF3knzZE*/
+  border: 2px inset var(--text-color);
   margin: 1%;
   padding: 10px;
-  border: 1px solid var(--box-color);
   float: left;
   width: 31%;
   height: 400px;
   background-size: 120%;
-  border-radius: 0px;
+  border-radius: 2px;
   position: relative;
 }
 
@@ -706,7 +710,7 @@ div.gallery {
 }
 
 div.gallery:hover {
-  border: 1px solid #D65B09;
+  border: 2px inset var(--bg-color);
 }
 
 div.gallery img {
