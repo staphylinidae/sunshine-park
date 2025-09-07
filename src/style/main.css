@@ -32,8 +32,13 @@ body {
 	margin: 0;
 	background-color: var(--bg-color);
 	color: var(--text-color);
+	height: 100vh;
+	overflow-x: hidden;
 }
 
+body.front-page{
+	background: #002611;
+}
 
 body.blog {
 	background-color: transparent;
@@ -55,12 +60,6 @@ body.crochet{
 body.words{
    background-size: 100%;
    background-image: url(park-bench-scene.jpg);
-}
-
-body.about{
-		background-size: 100%;
-
-	background-image: url(info-center.jpg);
 }
 
 body.resources{
@@ -114,13 +113,6 @@ before and after the text */
 the other elements, you will need to move that div outside
 of the container */
 #container {
-	max-width: 1000px;
-	/* this is the width of your layout! */
-	/* if you change the above value, scroll to the bottom
-and change the media query according to the comment! */
-	margin: 0 auto;
-	/* this centers the entire page */
-	margin-top: 100px;
 }
 
 /* the area below is for all links on your page
@@ -305,55 +297,6 @@ you can add them directly to the <div id="header"></div> element! */
 	border-color: var(--box-color);
 }
 
-
-/* Add a black background color to the top navigation */
-#topnav {
-  	background-color: #1c5200;
-	border: 1px solid var(--box-color);
-	text-align: center;
-	color: var(--text-color);
-	padding: 15px;
-}
-
-#topnav ul{
-	justify-content: space-evenly;
-	list-style-type: none;
-    display: flex;
-	padding: 0px;
-    margin: 0;
-	background-color: var(--box-color);
-}
-
-#topnav h1{
-	line-height: .6em;
-}
-
-#topnav ul li a {
-    padding: 6px 0 0 0;
-    display: block;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    border-right: 1px solid #000;
-    width: 193.2px;
-    height: 40px;
-    background: var(--box-color);
-    color: var(--text-color);
-    font-family: "Lastik", serif;
-    text-align: center;
-    text-decoration: none;
-	-webkit-text-stroke-width: .02em;
-	-webkit-text-stroke-color: black;
-	line-height: 1.2em;
-	letter-spacing: -.02em;
-	font-size: 150%;
-}
-
-#topnav ul li a:hover {
-    background: var(--text-color);
-    color: #0a130e;
-}
-
-
 audio {width: 100%; display: block; padding: 10px}
 
 a {	text-decoration: underline;     background: none;
@@ -408,19 +351,91 @@ main {
 	outline: 1px solid black;
 }
 
+.split-container {
+   display: flex;
+   width: 100%;
+   height: 100vh;
+   border: 4px solid black;
+}
+
+#split-picture,
+#split-main {
+	flex: 1;
+    display: flex;
+    flex-direction: column;
+	padding: 15px;
+	
+	align-items: center;
+}
+
+#split-picture {
+	background-color: rgba(255, 0, 0, 0);
+	flex: 0 0 60%;
+	text-align: center;
+	padding-top: 30px;
+	justify-content: center;
+}
+
+#split-main {
+	background-color: var(--box-color);
+	flex: 0 0 40%;
+	text-align: left;
+	overflow-y: scroll;
+	
+
+}
+
+.split-main-txt{
+	padding-top: 10vh;
+	overflow-y: auto;
+	height: 100%;
+}
+
+#split-picture img {
+	max-height: 95vh;
+	max-width: 	55vw;
+}
+
+@media (max-width: 800px) {
+    .split-container {
+        flex-direction: column;
+		margin: 2vw;
+		border: 0;
+    }
+	
+	#split-main {
+		order: 1;
+		width: 96vw;
+		flex: 80% 0 0;
+		border: 2px solid black;
+		overflow-x: hidden;
+	}
+	
+	.split-main-text{
+		padding-top: 15px;
+}
+
+
+	#split-picture {
+	order: 3;
+	flex: 20% 0 0;
+	width: 96vw;
+	}
+
+	#split-picture img {
+	max-height: 95vh;
+	max-width: 	95vw;
+	}
+
+}
+
 /* what's this "order" stuff about??
 allow me to explain!
 if you're using both sidebars, the "order" value
 tells the CSS the order in which to display them.
 left sidebar is 1, content is 2, and right sidebar is 3! */
 
-#leftSidebar {
-	order: 1;
-}
 
-#rightSidebar {
-	order: 3;
-}
 
 
 
@@ -431,7 +446,7 @@ footer {
 	height: 40px;
 	padding: 10px;
 	text-align: center;
-	/* this centers the footer text */
+	margin-top: 15px;
 }
 
 h1, /* TODO: make the header on the first page stand out more*/
@@ -474,9 +489,10 @@ h2 {
 		font-family: var(--head-font), monospace;
 	    letter-spacing: .02em;
 		line-height: .98em;
-			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
           -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
 h2 {
 	font-size: 260%;
 
@@ -613,9 +629,8 @@ a.invisible:hover {
 
 #statuscafe {
 	background-color: var(--box-color);
-	border: 1px solid var(--box-color);
-	padding: 15px;
-	padding-top: 10px;
+	padding: 10px;
+	padding-top: 5px;
     border: 1px solid black;
 	border-radius: 5px;
 }
