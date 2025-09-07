@@ -53,8 +53,7 @@ body.home{
 
 
 body.crochet{
-		background-size: 100%;
-	background-image: url(lake4.jpg);
+	background: #ebfe61;
 }
 
 body.words{
@@ -63,9 +62,7 @@ body.words{
 }
 
 body.resources{
-		background-size: 100%;
-
-	background-image: url(greenhouse.jpg);
+	background: #154b91;
 }
 
 body.screenshot-garden{
@@ -415,6 +412,9 @@ main {
 		padding-top: 15px;
 }
 
+	.crochet #split-main {
+		flex: 96% 0 0;
+	}
 
 	#split-picture {
 	order: 3;
