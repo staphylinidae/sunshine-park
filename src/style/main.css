@@ -26,14 +26,24 @@
   font-style: normal;
 }
 
+@font-face {
+	font-family: 'Nimbus Sans';
+	src: url('fonts/NimbusSans/NimbusSanL-Reg.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
-	font-family: var(--body-font), sans-serif;
-	font-weight: 400;
+	font-family: 'Nimbus Sans', Helvetica, var(--body-font), sans-serif;
+	font-weight: normal;
 	margin: 0;
 	background-color: var(--bg-color);
 	color: var(--text-color);
 	height: 100vh;
 	overflow-x: hidden;
+	letter-spacing: normal;
+	 word-spacing: normal;
+	 font-kerning: normal;
 }
 
 body.front-page{
@@ -60,7 +70,7 @@ body.crochet{
 }
 
 body.words{
-   --bg-color: #ebfe61;
+   --bg-color: #346508;
 }
 
 body.resources{
@@ -366,7 +376,6 @@ main {
     display: flex;
     flex-direction: column;
 	padding: 15px;
-	
 	align-items: center;
 }
 
@@ -381,16 +390,17 @@ main {
 #split-main {
 	background-color: var(--box-color);
 	flex: 0 0 40%;
-	text-align: left;
+	text-align: right;
 	overflow-y: scroll;
-	
-
+	padding-left: 40px;
+	padding-right: 0px;
 }
 
 .split-main-txt{
 	padding-top: 10vh;
 	overflow-y: auto;
 	height: 100%;
+	padding-right: 20px;
 }
 
 #split-picture img {
@@ -454,12 +464,18 @@ footer {
 	margin-top: 15px;
 }
 
+p {
+	font-size: 18px;
+	line-height: 1.35em;
+}
+
 h1, /* TODO: make the header on the first page stand out more*/
 h2,
 h3,
 h4 {
 	font-weight: normal;
 	color: var(--text-color);
+	font-family: 'National Park', sans-serif;
 
 }
 
@@ -653,7 +669,7 @@ a.invisible:hover {
 }
 
 .scrollbox {
-	overflow-y: scroll;  padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 50%); outline: 1px solid #9fb06d; border-radius: 1px;
+	overflow-y: scroll;  padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 50%); outline: 1.5px solid var(--outline-color); border-radius: 1px;
 }
 
 .button {
@@ -816,7 +832,7 @@ div.gallery button:hover, div.gallery button:focus {
     drop-shadow(-1px 1px 0 black)
     drop-shadow(1px -1px 0 black)
     drop-shadow(-1px -1px 0 black);
-
+  font-family: 'National Park';
 }
 
 @media only screen and (max-width: 600px) {
