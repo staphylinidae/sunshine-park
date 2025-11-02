@@ -7,16 +7,11 @@
 	/* colors */
 	--content: #2d6a02;
 	--text-color: #e6e6e6;
-	--box-color: #020c24;
+	--box-color: hsla(0, 0%, 0%, 20%);
 	--body-font: 'National Park';
 	--outline-color: black;
 	--bg-color: #2d6a02;
 	--head-font: 'Worlds Finest';
-}
-
-@font-face {
-  font-family: 'Worlds Finest';
-  src: url('fonts/WorldsFinest/WorldsfinestNormal.ttf') format('truetype');
 }
 
 @font-face {
@@ -33,21 +28,55 @@
 	font-style: normal;
 }
 
-body {
-	font-family: 'Nimbus Sans', Helvetica, var(--body-font), sans-serif;
+@font-face {
+	font-family: 'Aktiv Grotesk';
+	src: url('fonts/AktivGrotesk/OTF/AktivGrotesk-Regular.otf') format('opentype');
 	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Aktiv Grotesk';
+	src: url('fonts/AktivGrotesk/OTF/AktivGrotesk-Medium.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Urlaub Grotesk';
+	src: url('fonts/urlaub-grotesk/Urlaub-Grotesk-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Aktiv Grotesk', 'Nimbus Sans', Helvetica, var(--body-font), sans-serif;
+	font-weight: normal;
+	font-style: normal;
 	margin: 0;
 	background-color: var(--bg-color);
 	color: var(--text-color);
 	height: 100vh;
 	overflow-x: hidden;
 	letter-spacing: normal;
-	 word-spacing: normal;
-	 font-kerning: normal;
+	word-spacing: normal;
+	font-kerning: normal;
 }
 
 body.front-page{
-	--bg-color: #002611;
+	--bg-color: #00536a;
+	--text-color: #131313;
+	h1 {
+		font-size: 300%;
+	}
+	h2 {
+		font-size: 200%;
+		margin-top: 5px; 
+		margin-bottom: 10px;
+	}
+	a:hover {
+		background-color: #f0ec00e0;
+	}
 }
 
 body.about {
@@ -61,6 +90,14 @@ body.blog {
 body.home{
 	--bg-color: #00536a;
 	margin: 30px; margin-bottom: 0;
+	h1 {
+		text-shadow:
+    2px 2px 2px #000,
+    -2px 2px 2px #000,
+    -2px -2px 1px #000,
+    2px -2px 2px #000;
+}
+	}
 }
 
 
@@ -388,7 +425,7 @@ main {
 }
 
 #split-main {
-	background-color: var(--box-color);
+	background-color: #020c24;
 	flex: 0 0 40%;
 	text-align: right;
 	overflow-y: scroll;
@@ -444,16 +481,6 @@ main {
 
 }
 
-/* what's this "order" stuff about??
-allow me to explain!
-if you're using both sidebars, the "order" value
-tells the CSS the order in which to display them.
-left sidebar is 1, content is 2, and right sidebar is 3! */
-
-
-
-
-
 footer {
 	background-color: var(--box-color);
 	/* background color for footer */
@@ -473,10 +500,10 @@ h1, /* TODO: make the header on the first page stand out more*/
 h2,
 h3,
 h4 {
-	font-weight: normal;
+	font-weight: medium;
 	color: var(--text-color);
-	font-family: 'National Park', sans-serif;
-
+	font-family: 'Urlaub Grotesk';
+	letter-spacing: -.03em;
 }
 
 h2,
@@ -486,20 +513,16 @@ h4
 	text-align: left;
 	margin-top: 15px;
 	margin-bottom: 15px;
-
-
 }
 
 h3,
 h4 {
-	letter-spacing: -.02em;
 	line-height: 1.2em;
 }
 
 h1 {
 	font-size: 360%;
 	text-align: center;
-
 	margin-top: 0px;
 	margin-bottom: 0px;
 
@@ -507,11 +530,7 @@ h1 {
 
 h1,
 h2 {
-		font-family: var(--head-font), monospace;
-	    letter-spacing: .02em;
-		line-height: .98em;
-		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
-          -1px 1px 0 #000, 1px 1px 0 #000;
+	line-height: .98em;
 }
 
 h2 {
@@ -538,7 +557,6 @@ h5 { /* for photo description part in crochet */
 }
 
 strong {
-	/* this styles bold text */
 	color: #c3d59f;
 }
 
@@ -550,7 +568,7 @@ marquee {
 }
 
 ::selection {
-	background-color: #9fb06d;
+	background-color: #f0ec00e0;
 	color: black;
 }
 
@@ -566,26 +584,23 @@ a.invisible:hover {
 
 .enter {
 	outline: 1px solid black; border-radius: 50%; width: 120px;
-	background: #9fb06d;
-	color: var(--box-color);
+	background: #f0ec00e0;
 	text-align: center;
-	font-family: var(--head-font);
 	font-size: 200%; letter-spacing: .02em;
-	color: var(--box-color);
 }
 
 .enter a{
 	text-decoration: none; background-color: transparent;
-		color: black;
+	color: black;
 }
 
 .enter:hover{
-		text-decoration: none;
-		background-color: black;
-
+	text-decoration: none;
+	background-color: var(--text-color);
 }
 .enter a:hover {
-	color: #9fb06d;
+	color: #f0ec00e0;
+	background-color: transparent !important;
 }
 
 /* this is just a cool box, it's the darker colored one */
@@ -669,7 +684,7 @@ a.invisible:hover {
 }
 
 .scrollbox {
-	overflow-y: scroll;  padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 50%); outline: 1.5px solid var(--outline-color); border-radius: 1px;
+	overflow-y: scroll;  padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 10%); outline: 1.5px solid var(--outline-color); border-radius: 1px;
 }
 
 .button {
@@ -708,14 +723,14 @@ a.invisible:hover {
 }
 
 div.gallery {
-  border: 2px inset var(--text-color);
+  border: 2px solid #000;
+  background: var(--box-color);
   margin: 1%;
   padding: 10px;
   float: left;
   width: 31%;
   height: 400px;
   background-size: 120%;
-  border-radius: 2px;
   position: relative;
 }
 
@@ -750,7 +765,6 @@ div.desc {
   padding: 5px;
   margin-top: 5px;
   max-height: 150px;
-  background-color: var(--box-color);
   border-radius: 5px;
   overflow-y: auto;
   position: relative;
@@ -789,8 +803,7 @@ div.gallery button:hover, div.gallery button:focus {
 }
 
 :popover-open {
-  background-image: url(water-backdrop.jpg); /*source: https://unsplash.com/photos/a-bird-flying-over-a-body-of-water-2u3oF3knzZE*/
-  background-width: 100%;
+  background: #030305;
   padding: 20px;
   margin: 10px;
   border: 1px solid var(--box-color);
@@ -832,7 +845,6 @@ div.gallery button:hover, div.gallery button:focus {
     drop-shadow(-1px 1px 0 black)
     drop-shadow(1px -1px 0 black)
     drop-shadow(-1px -1px 0 black);
-  font-family: 'National Park';
 }
 
 @media only screen and (max-width: 600px) {
