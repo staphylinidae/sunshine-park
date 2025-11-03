@@ -73,11 +73,12 @@ body.front-page{
 	--text-color: #131313;
 	h1 {
 		font-size: 300%;
+		margin-top: 10px;
 	}
 	h2 {
 		font-size: 200%;
-		margin-top: 5px; 
-		margin-bottom: 5px;
+		margin-top: 10px; 
+		margin-bottom: 10px;
 	}
 	a:hover {
 		background-color: #f0ec00e0;
