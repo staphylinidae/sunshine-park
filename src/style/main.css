@@ -42,12 +42,17 @@
 	font-style: normal;
 }
 
+/* Webfont: UrlaubGrotesk-Regular */
 @font-face {
-	font-family: 'Urlaub Grotesk';
-	src: url('fonts/urlaub-grotesk/Urlaub-Grotesk-Regular.otf') format('opentype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'UrlaubGrotesk';
+    src: url('fonts/UrlaubGrotesk/Urlaub-Grotesk-Regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/UrlaubGrotesk/Urlaub-Grotesk-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('fonts/UrlaubGrotesk/Urlaub-Grotesk-Regular.otf') format('opentype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
 }
+
 
 body {
 	font-family: 'Aktiv Grotesk', 'Nimbus Sans', Helvetica, var(--body-font), sans-serif;
@@ -72,7 +77,7 @@ body.front-page{
 	h2 {
 		font-size: 200%;
 		margin-top: 5px; 
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
 	a:hover {
 		background-color: #f0ec00e0;
@@ -500,9 +505,9 @@ h1, /* TODO: make the header on the first page stand out more*/
 h2,
 h3,
 h4 {
+	font-family: 'UrlaubGrotesk';
 	font-weight: medium;
 	color: var(--text-color);
-	font-family: 'Urlaub Grotesk';
 	letter-spacing: -.03em;
 }
 
