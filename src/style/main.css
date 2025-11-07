@@ -69,8 +69,7 @@ body {
 }
 
 body.front-page{
-	--bg-color: #00536a;
-	--text-color: #131313;
+	--bg-color: #090e0a;
 	h1 {
 		font-size: 300%;
 		margin-top: 10px;
@@ -94,15 +93,14 @@ body.blog {
 }
 
 body.home{
-	--bg-color: #00536a;
+	--bg-color: #212521;
 	margin: 30px; margin-bottom: 0;
 	h1 {
 		text-shadow:
-    2px 2px 2px #000,
-    -2px 2px 2px #000,
-    -2px -2px 1px #000,
-    2px -2px 2px #000;
-}
+    2px 2px 0px #000,
+    -2px 2px 0px #000,
+    -2px -2px 0px #000,
+    2px -2px 0px #000;
 	}
 }
 
@@ -200,7 +198,7 @@ text-decoration:none; */
      width: 36.27vw; 
 	 display: inline-block;
       position: absolute;
-      filter:  drop-shadow(-2px -3px 0 #dad58c) drop-shadow(4px 6px 0 #02170a);
+      filter:  drop-shadow(-1px -1px 0 #090e0a) drop-shadow(1px 1px 0 #090e0a) drop-shadow(-1px 1px 0 #090e0a) drop-shadow(1px -1px 0 #090e0a);
     }
 
     div.round img {
@@ -431,11 +429,11 @@ main {
 }
 
 #split-main {
-	background-color: #020c24;
+	background-color: #090e0a;
 	flex: 0 0 40%;
-	text-align: right;
+	text-align: left;
 	overflow-y: scroll;
-	padding-left: 40px;
+	padding-left: 25px;
 	padding-right: 0px;
 }
 
@@ -488,8 +486,6 @@ main {
 }
 
 footer {
-	background-color: var(--box-color);
-	/* background color for footer */
 	width: 100%;
 	height: 40px;
 	padding: 10px;
@@ -506,19 +502,16 @@ h1, /* TODO: make the header on the first page stand out more*/
 h2,
 h3,
 h4 {
-	font-family: 'UrlaubGrotesk';
 	font-weight: medium;
-	color: var(--text-color);
-	letter-spacing: -.03em;
+	/* letter-spacing: -.03em; */
 }
 
 h2,
 h3,
-h4
-{
+h4 {
 	text-align: left;
 	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 h3,
@@ -531,7 +524,6 @@ h1 {
 	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 0px;
-
 }
 
 h1,
@@ -590,7 +582,7 @@ a.invisible:hover {
 
 .enter {
 	outline: 1px solid black; border-radius: 50%; width: 120px;
-	background: #f0ec00e0;
+	background: #b2120de5;
 	text-align: center;
 	font-size: 200%; letter-spacing: .02em;
 }
@@ -605,7 +597,7 @@ a.invisible:hover {
 	background-color: var(--text-color);
 }
 .enter a:hover {
-	color: #f0ec00e0;
+	color: #d0c7b9;
 	background-color: transparent !important;
 }
 
@@ -690,7 +682,7 @@ a.invisible:hover {
 }
 
 .scrollbox {
-	overflow-y: scroll;  padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 10%); outline: 1.5px solid var(--outline-color); border-radius: 1px;
+	overflow-y: scroll;  padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 10%); outline: 1px solid var(--outline-color); border-radius: 1px;
 }
 
 .button {
