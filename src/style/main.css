@@ -8,6 +8,7 @@
 	--content: #2d6a02;
 	--text-color: #e6e6e6;
 	--box-color: hsla(0, 0%, 0%, 20%);
+	--main-bg-color: #090e0a;
 	--body-font: 'National Park';
 	--outline-color: black;
 	--bg-color: #2d6a02;
@@ -17,7 +18,7 @@
 @font-face {
   font-family: 'National Park';
   src: url('fonts/NationalPark/NationalPark-VariableFont_wght.ttf') format('truetype');
-  font-weight: <weight>;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -69,7 +70,7 @@ body {
 }
 
 body.front-page{
-	--bg-color: #090e0a;
+	--bg-color: var(--main-bg-color);
 	h1 {
 		font-size: 300%;
 		margin-top: 10px;
@@ -149,36 +150,9 @@ body.shrines{
     border-style:  solid; 
   }
   
+  /* layout */
 
-/* below this line is CSS for the layout */
-
-/* this is a CSS comment
-to uncomment a line of CSS, remove the * and the /
-before and after the text */
-
-
-/* the "container" is what wraps your entire website */
-/* if you want something (like the header) to be Wider than
-the other elements, you will need to move that div outside
-of the container */
-#container {
-}
-
-/* the area below is for all links on your page
-EXCEPT for the navigation */
-#container a {
-	/* if you want to remove the underline
-you can add a line below here that says:
-text-decoration:none; */
-}
-
-#container a:hover{
-	/* if you want to remove the underline
-you can add a line below here that says:
-text-decoration:none; */
-}
-
-        .sally {
+  .sally {
     border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAxFJREFUeF7tnE1OJDEMRuk1S07B/Q/DKViyBrHrSqN+erJjVYlvVjNyEjsvn52fgrm9vb9+v9z9+fz4ut3/e7Xf2/76u+1v268+bX/b3vq7BehRUFXBBOiSoQEqS9T2lF9XxJYACnC1kz9bs6g9+bPxE5/DBvTrnDpU7TRBAkSbpF3AAIWaF6AS0OkValO4ugvaFCN/Nn7yT/6o//ixiQKilKUabMcnxduaHqBXP4daBVEKnj7laQK77VXgNoW75/OQ8t0O7HgBaolB+wAN0AOB7PLZ5Y8pcfpdnmoYZTj1t3byF6Dwfnn5m9LuqxwpkhS4uz+Nb+3j76H24E0Tqi4IjW/tASpLENXsAO0GSsR3pyilVDWl7fNb1d/4wX56gtP+AvTqN6VpxUz7Q4VWz6k0IapZVTvtAVTD6aKxjh+gcpcngQVogLoiMJ7yJGGqgTZgh6O/NcVrPa41Fm9KAfoccYDKcycpNkB3A6WaQuewag0mBVTt0/PD7/IB+vwb1rrgAbqcQykjSPEBuhsopTi9n1JNpfFJIda+O97td/kAhd+kqwKyCrEKpPbWf7V9++NIdQEIkLVXAVGJwpSnqyZNiHZBCpDGt/bueGi87PK7d/ko9HkORKHy96CopCBQ2kTIAdmnaybFQ0DoGxNlsH4PpYDJoe3f3T5Am4kG6NWAdh98rQKaeT0MZ+Op8mi/KdkJBGjxf9GZ3vXtAkehIPHTAaWA6JhE/e257+z+sIYSkLNPsBqf7R+g8rMyZVSAdgOluzytSNVOxyYav9qfxrd2vMvbAenYsbsm25rXPb8AlT8fSoIJ0G6gRLw7RW2KUY208ZN/8kf9x3d5CsheTQNUphgpJkD/G1BSRLedUtwqsDs+Ox5+l7cD2vYBaolB+wAN0KcEcmzqfhzpLvr2nEn+KSGov7WTP5pfFBqFHjVkFUgKKyt0+j2U/NnnN2pP/giwtY+/NtEECRA91nQfwwIUfoC2u0SswKNQ+bZACzK+y1dTutqfUri8KRFxqllnn2A1Pts/Cr36OdSueDUFp/39AB9jfSbnH3tJAAAAAElFTkSuQmCC') 28 /  28px / 0 round;
     border-width:  28px;
     border-style:  solid; 
@@ -490,7 +464,7 @@ footer {
 	height: 40px;
 	padding: 10px;
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 20px;
 }
 
 p {
@@ -568,9 +542,6 @@ marquee {
 ::selection {
 	background-color: #f0ec00e0;
 	color: black;
-}
-
-a.invisible{
 }
 
 a.invisible:hover {
@@ -678,8 +649,8 @@ a.invisible:hover {
     color: var(--box-color);
 }
 
-#statuscafe-content {
-}
+/* #statuscafe-content {
+} */
 
 .scrollbox {
 	overflow-y: scroll;  padding-right: 10px; padding-left: 18px; background-color: hsla(0, 0%, 0%, 10%); outline: 1px solid var(--outline-color); border-radius: 1px;
@@ -734,7 +705,7 @@ div.gallery {
 
 @media only screen and (max-width: 900px) {
 div.gallery {
-    width: 47.5%;		//TODO: change for mobile
+    width: 47.5%;		/* TODO: change for mobile */
   }
 }
 
@@ -784,7 +755,6 @@ div.popupImg img{
 	height: 60vh;
 	max-width: 80%;
 	height: auto;
-	maring-left: auto;
 	text-align: center;
 }
 
@@ -855,9 +825,6 @@ div.gallery button:hover, div.gallery button:focus {
   opacity: 1;
 
 }
-.imgtxt:hover img, .imgtxt:focus img {
-  /* add hover effects like transform or filter to your images here! */
-}
 
 a.imgtxt:hover {
 	background: transparent;
@@ -881,7 +848,53 @@ background-size: 20%;
 	padding: 10px;
 }
 
+table{
+	border-collapse: collapse;
+	background-color: rgb(0, 0, 0);
+	margin-bottom: 10px;
+}
 
+td, th{
+	border: 1px solid #e6e6e630;
+	padding: 5px;
+}
+
+tr:nth-child(even){
+	background-color: #023a6a60;
+}
+
+.tooltip {
+  position: relative;
+  text-indent: 0em;
+  text-decoration-line: underline;
+  text-decoration-thickness: .1em;
+ }
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  outline: 1px solid #e6e6e630;
+  color: var(--text-color);
+  text-align: center;
+  border-radius: 1px;
+  padding: 7px 5px;
+  line-height: 1.2em;
+
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -50%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  font-size: 80%;
+}
+
+/*
 #wcb.carbonbadge{}
 
 #wcb.carbonbadge sub{ }
@@ -896,7 +909,7 @@ background-size: 20%;
 
 #wcb.wcb-d #wcb_a{ }
 
-#wcb.wcb-d #wcb_2{ }
+#wcb.wcb-d #wcb_2{ } /*
 
 /* BELOW THIS POINT IS MEDIA QUERY */
 
