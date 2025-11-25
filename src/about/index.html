@@ -10,14 +10,10 @@
     </head>
 <body class="about">
     <div class="split-container">
-            <div id="split-picture">
-                <a class="back" href="../home" alt=""><span class="backtxt">Back</span></a>
-                <img src="../style/info-center.jpg">
-            </div>
-            <div id="split-main">
+        <div id="split-main">
             <div class="split-main-txt">
                 <h1>Info Center</h1>
-                <p style="text-align: center;" > Howdy! This is Sunshine Park, a personal website.</p>
+                <p style="text-align: center;"> Howdy! This is Sunshine Park, a personal website.</p>
                 <p>This park is still under construction, so make sure to follow the path markers since there's still
                    some dead ends. We have water fountains to help you stay hydrated. You can also eat at the picnic
                    tables if you like, but don't feed the animals.
@@ -29,7 +25,7 @@
 				    This site is likely to be unfinished for a while. I intially coded this website on Notepad++, VS 2022, and now VS Codium (I'm indecisive,
                     hah). Most images were found on Unsplash and are in the creative commmmons, except the crochet photos. You can find citations
                 for (some) of the images in the <a href="../resources">resources page</a>.</p>
-                <table>
+                <table width=200px style="display: inline-block;">
                 <tr>
                     <th>likes</th>
                     <th>dislikes</th>
@@ -38,29 +34,32 @@
                 </tr>
                 <tr>
                     <td>entomology</td>
-                    <td>mold</td>
+                    <td class="tooltip">mold<span class="tooltiptext">yuck</span></td>
                     <td></td>
-                    <td>animal</td>
+                    <td>animal</td> 
                     <td class="tooltip">insects <span class="tooltiptext">sorry i can't choose, i love entomology</span></td> 
                 </tr>
                 <tr>
-                    <td>walks</td>
-                    <td>pesticide</td>
+                    <td class="tooltip">walks <span class="tooltiptext">good alone, with a friend, silent, or chatty</span></td>
+                    <td class="tooltip">pesticides<span class="tooltiptext">yuck</span></td>
                     <td></td>
                     <td>board game</td>
                     <td>everyone else thinks this game is awesome</td>
                 </tr>
                 <tr>
                     <td>socialism</td>
-                    <td>capitalism</td>
+                    <td class="tooltip">capitalism<span class="tooltiptext">yuck</span></td>
                     <td></td>
                     <td>pencil</td>
-                    <td>graphgear 1000</td>
+                    <td class="tooltip">graphgear 1000<span class="tooltiptext"><img src="assets/pencil.png" height=150px alt="graphgear 1000 .7 lead pencil"></span></td>
                 </tr>
                 <tr>
                     <td>trying new things</td>
                     <td>idk</td>
                 </tr>
+                </table>
+                <table style="display: inline;">
+                    <th>hi</th>
                 </table>
                 <div id="statuscafe" style="width: 100%; float: inline-end;"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div>
                     <!-- <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script><audio controls autoplay loop style="margin: 0; width: 263px; padding-left: 0; padding-top: 0; border-radius: 5px;">
@@ -70,6 +69,11 @@
                 <footer id="footer">sunshine park, 2025</footer>
              </div>
              </div>
+            <div id="split-picture">
+                <a class="back" href="../home" alt=""><span class="backtxt">Back</span></a>
+                <img src="../style/info-center.jpg">
+            </div>
+            
     </div>
 </body>
 </html>
