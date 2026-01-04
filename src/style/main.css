@@ -334,12 +334,6 @@ a.back:hover {
 	text-decoration: underline wavy;
 }
 
-.enter a:hover,
-.back a:hover {
-	color: #d0c7b9;
-	background-color: Mediumblue;
-}
-
 .backtxt {
 	filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px -1px 0 black);
 }
@@ -376,9 +370,8 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
-	background: var(--text-color);
-	color: var(--box-color);
+	color: #d0c7b9;
+	background-color: Mediumblue;
 }
 
 ol {
@@ -624,10 +617,8 @@ strong {
 	color: #c3d59f;
 }
 
-
 ::selection {
-	background-color: yellowgreen;
-	color: black;
+	background-color: DodgerBlue;
 }
 
 a.invisible:hover {
