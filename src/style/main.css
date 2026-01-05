@@ -15,6 +15,7 @@
 	--bg-color: #2d6a02;
 	--head-font: 'Worlds Finest';
 	--topnav-hover: limegreen;
+	--current-link: yellow;
 }
 
 @font-face {
@@ -142,7 +143,7 @@ body.screenshot-garden {
 	margin-top: 15px;
 }
 
-body.shrines {
+body.trail {
 	background-image: url('../style/backdrops/trail2.jpg');
 }
 
@@ -821,7 +822,7 @@ div.popupImg {
 }
 
 div.popupImg img {
-	height: 60vh;
+	max-height: 45vh;
 	max-width: 80%;
 	height: auto;
 	text-align: center;
@@ -978,11 +979,11 @@ tr:nth-child(even) {
 	display: flex;
 	column-gap: 16px;
 	align-items: center;
-	animation: scroll 10s linear infinite;
+	animation: scroll 20s linear infinite;
 }
 
 .scroll {
-	animation: scroll 10s linear infinite;
+	animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {
@@ -1040,6 +1041,29 @@ tr:nth-child(even) {
 /* Change background color of dropdown button on hover */
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+}
+
+.sitemap h2, .sitemap h3, .sitemap h4 {
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: normal;
+	line-height: .5rem;
+}
+
+.sitemap h3::before
+{
+	margin-left: 20px;
+	content: "📎";
+}
+
+.sitemap h4::before
+{
+	margin-left: 20px;
+	content: "📎";
+}
+
+.currentlink a{
+	color: var(--current-link);
 }
 
 /*
